@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>طرق التواصل مع صيانة فاجور</title>
+<script>
+  function togglePhoneNumber(button) {
+    const card = button.closest(".feature");
+    const phoneDiv = card.querySelector(".phone-number");
+    
+    if (phoneDiv.style.display === "none" || phoneDiv.textContent === "") {
+      phoneDiv.textContent = "201211114528";
+      phoneDiv.style.display = "block";
+      button.textContent = "إخفاء الأرقام الهاتفية";
+    } else {
+      phoneDiv.textContent = "";
+      phoneDiv.style.display = "none";
+      button.textContent = "عرض الأرقام الهاتفية";
+    }
+  }
+</script>
+
+
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      margin: 0;
+      background: linear-gradient(to bottom left, #fef2f2, #ffffff);
+      color: #333;
+      direction: rtl;
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: auto;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 40px;
+      font-weight: 900;
+      margin-bottom: 10px;
+      color: #D41818;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #D41818;
+      margin-bottom: 20px;
+    }
+
+    .intro {
+      max-width: 700px;
+      margin: 0 auto 50px;
+      font-size: 1.1rem;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    @media (min-width: 768px) {
+      .features {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .feature {
+      background-color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      padding: 24px;
+      text-align: right;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .feature:hover {
+      box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+    }
+
+    .feature h3 {
+      font-size: 25px;
+      font-weight: 700;
+      color: #D41818;
+      margin-bottom: 10px;
+    }
+
+    .feature p {
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .feature .btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      text-align: center;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+    .btn-primary {
+      background-color: #D41818;
+    }
+
+    .btn-primary:hover {
+      background-color: #b01010;
+    }
+
+    .btn-facebook {
+      background-color: #1877F2;
+    }
+
+    .btn-facebook:hover {
+      background-color: #145dbf;
+    }
+
+    .btn-instagram {
+      background: linear-gradient(45deg, #feda75, #d62976, #962fbf, #4f5bd5);
+    }
+
+    .btn-instagram:hover {
+      opacity: 0.9;
+    }
+
+    .cta {
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<section>
+  <h2>كيف يمكنني التواصل مع فريق صيانة فاجور العاصمة الإدارية خلال أسرع وقت</h2>
+  <div class="subtitle">خدمة دعم متكاملة وسريعة</div>
+  <p class="intro">
+    يمكنك من خلال موقعنا أن تقوم بالتعرف على كافة الطرق المختلفة التي تساعدك على التواصل مع فريق صيانة فاجور العاصمة الإدارية Fagor بشكل مباشر، ومن أجل طلب خدمات الصيانة والفحص خلال أسرع وقت ممكن.
+  </p>
+
+  <div class="features">
+    <div class="feature">
+      <h3>التواصل من خلال الخط الساخن</h3>
+      <p>
+        يمكنك أن تقوم بالتواصل مع فريق خدمة عملائنا من خلال الخط الساخن التابع لنا، وسوف يقوم فريقنا بالرد عليك وحجز أقرب موعد للفحص المنزلي من أجلك.
+      </p>
+      <a href="tel:201211114528" class="btn btn-primary">اتصل بالخط الساخن الآن</a>
+    </div>
+    <div class="feature">
+      <h3>التواصل عبر الأرقام الهاتفية</h3>
+      <p>
+        هناك عدة أرقام هاتفية متوفرة تابعة لنا يمكنك أن تقوم بالتواصل من خلالها بشكل مباشر.
+      </p>
+      <a href="#" class="btn btn-primary" onclick="togglePhoneNumber(this); return false;">عرض الأرقام الهاتفية</a>
+
+<div class="phone-number" style="display: none;
+text-align:center;margin-top: 10px; font-weight: bold; color: #333;"></div>
+
+
+    </div>
+    <div class="feature">
+      <h3>خدمة الواتس آب</h3>
+      <p>
+        يمكنك أن تقوم بالتواصل معنا والإستفادة من مختلف خدماتنا من خلال خدمة الواتس أب المتوفرة لدينا على مدار الساعة.
+      </p>
+      <a href="https://api.whatsapp.com/send/?phone=201211114528" class="btn btn-primary">تواصل عبر الواتس آب</a>
+    </div>
+    <div class="feature">
+      <h3>التواصل عبر مواقع التواصل الاجتماعي</h3>
+      <p>
+        يمكنك أن تقوم بالتواصل معنا من خلال مواقع التواصل الإجتماعي التابعة لنا، مثل الفيس بوك و الانستغرام وغيرهم.
+      </p>
+      <a href="https://www.facebook.com/profile.php?id=61571153322292" class="btn btn-facebook">فيسبوك</a>
+      <a href="https://www.instagram.com/fagor_egypt" class="btn btn-instagram">إنستغرام</a>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

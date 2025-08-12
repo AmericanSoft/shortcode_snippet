@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>خدماتنا</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    .services-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .services-section h2 {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: #fff;
+      border: 1px solid #0e2c51;
+      border-radius: 8px;
+      padding: 30px 20px 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      position: relative;
+    }
+
+    .service-card img.icon {
+      width: 48px;
+      height: 48px;
+      position: absolute;
+      top: -24px;
+      right: 20px;
+      background: #fff;
+      padding: 6px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .service-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 30px 0 15px;
+    }
+
+    .service-card p {
+      font-size: 15px;
+      color: #444;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .service-card button {
+      background: #002a7c;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .service-card button:hover {
+      background: #0d3d9d;
+    }
+
+    @media (max-width: 768px) {
+      .service-card {
+        padding: 20px 15px;
+      }
+
+      .services-section h2 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="services-section">
+    <h2>خدماتنا</h2>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="استشارات فنية" class="icon">
+        <h3>استشارات فنية مجانية</h3>
+        <p>مش لازم تكون خبير علشان تتابع جهازك، فريق خدمة العملاء والفنيين بتوعنا جاهزين يردوا على كل استفساراتك ويوجهوك للحل المناسب.</p>
+        <button>اطلب صيانة الآن</button>
+      </div>
+
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="إصلاح الأعطال" class="icon">
+        <h3>إصلاح الأعطال الفورية</h3>
+        <p>لو التكييف وقف فجأة أو بدأ يطلع صوت أو ريحة غريبة، الفنيين المتخصصين بتوعنا بيوصلوا لك بسرعة يصلحوا العطل وتحصلوا على أريحية في أسرع وقت.</p>
+        <button>اطلب صيانة الآن</button>
+      </div>
+
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/481/481148.png" alt="صيانة دورية" class="icon">
+        <h3>صيانة دورية للتكييف</h3>
+        <p>خدمة مهمة للحفاظ على عمر الجهاز وكفاءته، بنراجع كل جزء في الجهاز من الفلاتر للوحدة الخارجية ونتأكد إذا كان فيه حاجة لتغيير الفلتر الداخلي أو الشحن.</p>
+        <button>اطلب صيانة الآن</button>
+      </div>
+
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1827/1827433.png" alt="تركيب تكييفات" class="icon">
+        <h3>تركيب تكييفات جديدة</h3>
+        <p>سواء شارك بتركيب جديد أو نقل جهازك من مكان لمكان، بنقدملك خدمة تركيب احترافية مع اختبار شامل للجهاز بعد التركيب.</p>
+        <button>اطلب صيانة الآن</button>
+      </div>
+
+      <div class="service-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/6197/6197278.png" alt="استبدال قطع الغيار" class="icon">
+        <h3>استبدال قطع الغيار</h3>
+        <p>بنستخدم قطع غيار أصلية 100% من الشركة الأم لضمان جودة الصيانة وتوفير عمر أطول للجهاز مع ضمان يتم توثيقه رسميًا للعميل.</p>
+        <button>اطلب صيانة الآن</button>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

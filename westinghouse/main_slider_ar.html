@@ -1,0 +1,252 @@
+
+        <div class="glem-slider">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <style>
+            .glem-slider * { box-sizing: border-box; font-family: 'cairo'; }
+            .glem-slider { width: 100%; overflow: hidden; position: relative; direction: rtl; }
+            .glem-slider .swiper-wrapper { height: 100%; }
+            .glem-slider .swiper-slide { position: relative; height: 100%; }
+            .glem-slider .swiper-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+            .glem-slider .slide-caption {
+            
+            position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 10;
+    text-align: center;
+    max-width: 1200px;   
+    padding: 0 20px;
+            }
+            .glem-slider .slide-caption h1 {
+            font-size: 44px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.4;
+            color: white;
+            white-space: normal;
+            word-break: break-word;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            }
+            .glem-slider .slide-caption p {
+            font-size: 22px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            line-height: 1.6;
+            color: #fff;
+            }
+            .highlight {
+            color: #FF7A31;
+            font-weight: bold;
+            }
+            .glem-slider .cta-group {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            }
+            .glem-slider .cta-text {
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;
+            flex: 1;
+            margin-top: 30px;
+            max-width: 300px;
+            white-space: normal;
+            }
+            .glem-slider .btn {
+            background-color: #FF7A31;
+            color: #000;
+            padding: 24px 30px;
+            border: none;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 20px;
+            white-space: nowrap;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            }
+            .glem-slider .swiper-pag {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translate(-10%, -10%);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 10;
+            }
+            .glem-slider .swiper-pagination-bullet {
+            width: 4px;
+            height: 25px;
+            background-color: white;
+            opacity: 1;
+            border-radius: 2px;
+            transition: all 0.5s ease;
+            }
+            .glem-slider .swiper-pagination-bullet-active {
+            background-color: #FF7A31;
+            height: 70px;
+            transition: all 0.5s ease;
+            }
+
+            @media (max-width: 768px) {
+            .glem-slider .swiper { width: 100%; height: 70vh; }
+            .glem-slider .swiper-slide { height: 100vh; }
+
+            .glem-slider .slide-caption {
+                top: 10%;
+                left: 50%;
+                transform: translateX(5%);
+                width: 90%;
+                padding: 0 15px;
+                text-align: center;
+                direction: rtl;
+            }
+
+            .glem-slider .swiper-pag {
+                display: none !important;
+            }
+
+            .glem-slider .slide-caption h1,
+            .glem-slider .slide-caption p,
+            .glem-slider .cta-text {
+                text-align: center;
+            }
+
+            .glem-slider .slide-caption h1 {
+                font-size: 22px !important;
+                white-space: normal !important;
+                line-height: 1.4;
+                word-break: break-word;
+            }
+
+            .glem-slider .slide-caption p {
+                font-size: 16px !important;
+            }
+
+            .glem-slider .cta-text {
+                display: none;
+            }
+
+            .glem-slider .cta-group {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 20px;
+            }
+
+            .glem-slider .btn {
+                background-color: #FF7A31;
+                color: #000;
+                padding: 20px;
+                border: none;
+                font-weight: bold;
+                border-radius: 6px;
+                cursor: pointer;
+                font-size: 16px;
+                white-space: nowrap;
+                margin-top: 40px;
+                margin-bottom: 20px;
+            }
+            }
+
+            @media (min-width: 768px) and (max-width: 1024px) {
+            .glem-slider .slide-caption {
+                top: 10% !important;
+                right: 50% !important;
+                left: auto !important;
+                transform: translateX(50%) !important;
+                text-align: center !important;
+                max-width: 90% !important;
+            }
+
+            .glem-slider .cta-group {
+                flex-direction: column !important;
+                align-items: center !important;
+            }
+
+            .glem-slider .cta-text {
+                text-align: center !important;
+            }
+            }
+        </style>
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+            
+
+        
+            </div>
+            <div class="swiper-pag"></div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+    const sliderData = [
+        {
+        img: "https://westinghouse-eg.com/wp-content/uploads/2025/04/cooker-82993_1280.jpg",
+        title: "صيانة <strong class=\"highlight\">وايت وستنجهاوس</strong> المعتمدة في مصر",
+        desc: "احجز صيانة مضمونة في خطوات بسيطة فنيين معتمدين – استجابة سريعة قطع أصلية بضمان الشركة"  
+        },
+        {
+        img: "https://westinghouse-eg.com/wp-content/uploads/2025/04/cooker-82993_1280.jpg",
+        title: "صيانة <strong class=\"highlight\">وايت وستنجهاوس</strong> المعتمدة في مصر",
+        desc: "احجز صيانة مضمونة في خطوات بسيطة فنيين معتمدين – استجابة سريعة قطع أصلية بضمان الشركة"  
+        },
+        {
+        img: "https://glemgas-eg.com/wp-content/uploads/2025/07/Hero-section-3.png",
+        title: "صيانة <strong class=\"highlight\">وايت وستنجهاوس</strong> المعتمدة في مصر",
+        desc: "احجز صيانة مضمونة في خطوات بسيطة فنيين معتمدين – استجابة سريعة قطع أصلية بضمان الشركة"  
+        },
+        {
+        img: "https://glemgas-eg.com/wp-content/uploads/2025/07/Hero-section-2.png",
+        title: "صيانة <strong class=\"highlight\">وايت وستنجهاوس</strong> المعتمدة في مصر",
+        desc: "احجز صيانة مضمونة في خطوات بسيطة فنيين معتمدين – استجابة سريعة قطع أصلية بضمان الشركة"  
+        }
+    ];
+
+    const swiperWrapper = document.getElementsByClassName("swiper-wrapper")[0];
+
+    sliderData.forEach(slide => {
+        const slideEl = document.createElement("div");
+        slideEl.className = "swiper-slide";
+        slideEl.innerHTML = `
+        <img src="${slide.img}" />
+        <div class="slide-caption">
+            <h1>${slide.title}</h1>
+            <p>${slide.desc}</p>
+            <div class="cta-group">
+            <span class="cta-text">احجز الآن وسيتم التواصل معاك في أقرب وقت ممكن</span>
+            <button class="btn open-popup-btn">اطلب صيانة الآن</button>
+            </div>
+        </div>
+        `;
+        swiperWrapper.appendChild(slideEl);
+    });
+
+
+
+
+
+
+
+
+            const swiper = new Swiper(".mySwiper", {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pag",
+                clickable: true,
+            }
+            });
+        </script>
+        </div>
+

@@ -1,0 +1,95 @@
+<style>
+  /* ====== Simple Logo Marquee (Pure CSS) ====== */
+  .logo-marquee{
+    --gap: 64px;         /* المسافة بين الشعارات */
+    --height: 70px;      /* ارتفاع الشعار */
+    --duration: 30s;     /* سرعة الحركة (كلما زادت المدة الحركة أبطأ) */
+    overflow: hidden;
+    width: 100%;
+    padding: 16px 0;
+    background: #fff;
+    /* تدرج قناع لحواف أنعم (اختياري) */
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+            mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  }
+
+  .logo-marquee .logo-track{
+    display: flex;
+    align-items: center;
+    width: max-content;      /* مهم للتمرير السلس */
+    will-change: transform;
+    animation: marquee var(--duration) linear infinite;
+  }
+
+  /* لو حبيت اتجاه RTL، بس حط dir="rtl" على السكشن */
+  .logo-marquee[dir="rtl"] .logo-track{
+    animation-name: marquee-rtl;
+  }
+
+  .logo-marquee .logo-set{
+    display: inline-flex;
+    align-items: center;
+    gap: var(--gap);
+    padding-left: 40px;      /* مسافة بسيطة في البداية */
+  }
+
+  .logo-marquee .logo{
+    display: inline-flex;
+    align-items: center;
+  }
+  .logo-marquee .logo img{
+    height: var(--height);
+    width: auto;
+    object-fit: contain;
+    display: block;
+  }
+
+  /* حركة LTR */
+  @keyframes marquee{
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); } /* نصف لأننا مكررين المجموعة مرتين */
+  }
+  /* حركة RTL */
+  @keyframes marquee-rtl{
+    from { transform: translateX(-50%); }
+    to   { transform: translateX(0); }
+  }
+
+  /* مراعاة المستخدمين الذين يفضلون إيقاف الحركة */
+  @media (prefers-reduced-motion: reduce){
+    .logo-marquee .logo-track{ animation: none; }
+  }
+
+  /* استجابة */
+  @media (max-width: 768px){
+    .logo-marquee{ --gap: 40px; --height: 54px; --duration: 24s; }
+  }
+  @media (max-width: 420px){
+    .logo-marquee{ --gap: 28px; --height: 44px; --duration: 20s; }
+  }
+</style>
+
+<!-- ====== Logos Marquee (duplicate the set twice) ====== -->
+<section class="logo-marquee" id="logos" dir="ltr">
+  <div class="logo-track">
+    <!-- SET A -->
+    <div class="logo-set">
+      <a class="logo"><img src="https://americangroup-eg.com/wp-content/uploads/2025/08/samsung.png" alt="Samsung" loading="eager" decoding="async"></a>
+      <a class="logo"><img src="https://americangroup-eg.com/wp-content/uploads/2025/08/Chiller-Egypt.png" alt="Chiller Egypt" loading="eager" decoding="async"></a>
+      <a class="logo"><img src="https://americangroup-eg.com/wp-content/uploads/2025/08/toshiba.png" alt="Toshiba" loading="eager" decoding="async"></a>
+      <a class="logo"><img src="https://americangroup-eg.com/wp-content/uploads/2025/08/LG.png" alt="LG Egypt" loading="eager" decoding="async"></a>
+      <a class="logo"><img src="https://americangroup-eg.com/wp-content/uploads/2025/08/miele.png" alt="Miele" loading="eager" decoding="async"></a>
+      <a class="logo"><img src="https://americangroup-eg.com/wp-content/uploads/2025/08/Westinghouse.png" alt="Westinghouse" loading="eager" decoding="async"></a>
+    </div>
+
+    <!-- SET B (exact copy of SET A) -->
+    <div class="logo-set" aria-hidden="true">
+      <a class="logo"><img src="https://americangroup-eg.com/wp-content/uploads/2025/08/samsung.png" alt="" loading="eager" decoding="async"></a>
+      <a class="logo"><img src="https://americangroup-eg.com/wp-content/uploads/2025/08/Chiller-Egypt.png" alt="" loading="eager" decoding="async"></a>
+      <a class="logo"><img src="https://americangroup-eg.com/wp-content/uploads/2025/08/toshiba.png" alt="" loading="eager" decoding="async"></a>
+      <a class="logo"><img src="https://americangroup-eg.com/wp-content/uploads/2025/08/LG.png" alt="" loading="eager" decoding="async"></a>
+      <a class="logo"><img src="https://americangroup-eg.com/wp-content/uploads/2025/08/miele.png" alt="" loading="eager" decoding="async"></a>
+      <a class="logo"><img src="https://americangroup-eg.com/wp-content/uploads/2025/08/Westinghouse.png" alt="" loading="eager" decoding="async"></a>
+    </div>
+  </div>
+</section>

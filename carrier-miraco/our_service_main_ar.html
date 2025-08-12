@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>خدماتنا</title>
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f0f0;
+    }
+
+    .services-section {
+      background: url('https://carrier-miraco.com/wp-content/uploads/2025/08/our-service-main.png') no-repeat center center;
+      background-size: cover;
+      padding: 60px 20px;
+      color: #fff;
+      text-align: center;
+      position: relative;
+    }
+
+    .services-section::before {
+      content: '';
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .services-section h2 {
+        color: #ffffff;
+        position: relative;
+  font-size: 36px;
+  margin-bottom: 40px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* هذا يجعل الزخرفة والنص متمركزين أفقياً */
+  gap: 15px;
+}
+   
+.title-decor {
+  display: inline-block;
+  width: 60px;
+  height: 4px;
+  border-radius: 25px;
+  background: #18479E;
+}
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .services-grid .service-box {
+      background:transparent;
+      color: #ffffff;
+      border-radius: 16px;
+      padding: 25px 20px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      background: #ffc107;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 15px;
+      font-size: 24px;
+    }
+
+    .service-box h3 {
+      color: #fff;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .service-box p {
+        font-weight: 300;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    /* هذا الحاوي للصف الثاني فقط */
+    .second-row {
+      color: #ffffff;
+      background: transparent;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      justify-content: center;
+      max-width: 800px;
+      margin: 40px auto 0;
+      position: relative;
+    }
+
+    @media (max-width: 768px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      .second-row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="services-section">
+    <h2>  <span class="title-decor"></span>
+
+        خدماتنا</h2>
+
+    <!-- ✅ الصف الأول: 3 صناديق -->
+    <div class="services-grid">
+      <div class="service-box">
+        <div class="service-icon">📶</div>
+        <h3>استشارات فنية مجانية</h3>
+        <p>مش لازم تكون خبير تكييفات – إحنا هنا نساعدك في أي مشكلة وتوجيهك للحل</p>
+      </div>
+
+      <div class="service-box">
+        <div class="service-icon">🛠️</div>
+        <h3>إصلاح الأعطال الفورية</h3>
+        <p>نوصل لك بسرعة ونصلح المشاكل في أقل وقت</p>
+      </div>
+
+      <div class="service-box">
+        <div class="service-icon">🔄</div>
+        <h3>صيانة دورية للتكييفات</h3>
+        <p>نحافظلك على أداء الجهاز من خلال زيارات صيانة دورية</p>
+      </div>
+    </div>
+
+    <!-- ✅ الصف الثاني: 2 صناديق متمركزين -->
+    <div class="second-row">
+      <div class="service-box">
+        <div class="service-icon">❄️</div>
+        <h3>تركيب تكييفات جديدة</h3>
+        <p>نخصصلك التكييف الأنسب لأي نوع استخدام، مع ضمان التشغيل السريع والتوصيل الآمن</p>
+      </div>
+
+      <div class="service-box">
+        <div class="service-icon">🔧</div>
+        <h3>استبدال قطع الغيار</h3>
+        <p>نوفرلك قطع غيار أصلية مع ضمان شامل، ونركبها بدون تأخير وبأعلى معايير الأمان</p>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

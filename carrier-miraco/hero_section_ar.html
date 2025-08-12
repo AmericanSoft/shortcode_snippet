@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>كاريير مصر المعتمد</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    .hero-section {
+      position: relative;
+      padding: 0px 0px;
+      display: flex;
+      justify-content: right;
+      align-items: center;
+      min-height: 500px;
+    }
+    .hero-section img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .hero-card {
+     margin-right: 100px;
+     margin-bottom: -200px;
+      background-color: white;
+      border-radius: 12px;
+      padding: 40px;
+      max-width: 700px;
+      width: 100%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      text-align: right;
+      position: absolute;
+      z-index: 2;
+
+    }
+
+    .hero-title {
+      font-size: 30px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 12px;
+    }
+
+    .hero-desc {
+      font-size: 16px;
+      color: #4B5563;
+      margin-bottom: 30px;
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #E5E7EB;
+      border-bottom: 1px solid #E5E7EB;
+      padding: 20px 0;
+      margin-bottom: 30px;
+    }
+
+    .stat-item {
+      text-align: center;
+      flex: 1;
+    }
+
+    .stat-title {
+      font-size: 30px;
+      font-weight: 700;
+      color: #4B5563;
+      margin-bottom: 10px;
+    }
+
+    .stat-value {
+      font-size: 24px;
+      color: #1D4ED8;
+      font-weight: bold;
+    }
+
+    .hero-button {
+      display: inline-block;
+      background-color: #18479E;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero-button:hover {
+		color: white;
+      background-color: #123b87;
+    }
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 20px;
+    min-height: auto;
+  }
+
+  .hero-card {
+    position: static;
+    width: 100%;
+    margin: 20px 0 0;
+    padding: 20px;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .hero-title {
+    font-size: 24px;
+  }
+
+  .hero-desc {
+    font-size: 14px;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px 0;
+    margin-bottom: 20px;
+  }
+
+  .stat-title {
+    font-size: 22px;
+  }
+
+  .stat-value {
+    font-size: 16px;
+  }
+
+  .hero-button {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <section class="hero-section">
+    <img src="https://carrier-miraco.com/wp-content/uploads/2025/08/hero_section.png" alt="كاريير مصر المعتمد">
+    <div class="hero-card">
+      <h1 class="hero-title">مركز صيانة كاريير مصر المعتمد</h1>
+      <p class="hero-desc">مركز صيانة كاريير مصر المعتمد احجز صيانة الآن وسيتم التواصل معك في أقرب وقت ممكن</p>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-title">الخبرة</div>
+          <div class="stat-value">+ 10 سنوات</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-title">العملاء</div>
+          <div class="stat-value">+ 1000 عميل</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-title">نسبة الرضاء</div>
+          <div class="stat-value">% 98</div>
+        </div>
+      </div>
+
+      <a href="#" class="hero-button open-popup-btn">اطلب صيانة الآن</a>
+    </div>
+  </section>
+</body>
+</html>

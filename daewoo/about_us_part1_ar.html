@@ -1,0 +1,251 @@
+
+ <html lang="ar" dir="rtl">
+ <style>
+    .glem-section {
+      padding: 100px 100px;
+      margin: auto;
+    }
+
+    .h2 {
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 30px;
+      position: relative;
+      text-align: center;
+      padding-bottom: 50px;
+    }
+
+   .h2::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      transform: translateY(-300%);
+      width: 150px;
+      height: 5%;
+      border-radius: 25px;
+      background: #E21111;
+    }
+
+    .glem-about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .glem-about-image img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .glem-about-info {
+      display: flex;
+      }
+
+    .glem-about-text p {
+      margin-bottom: 20px;
+      font-size: 16px;
+      line-height: 1.8;
+      display: block;
+     padding-top: 80px;
+    }
+    .glem-about-text a{
+        font-weight: 700;
+        color: #E21111;
+        
+    }
+    .glem-about-text a:hover{
+        font-weight: 700;
+        color: #000;
+        
+    }
+
+    .glem-about-text::before {
+      content: '';
+      position: absolute;
+      width: 6px;
+      top: 330px;
+      right: 60px;
+      height: 10%;
+      border-radius: 25px;
+      background: #E21111;
+    }
+
+    .glem-buttons {
+      display: flex;
+      padding-top: 100px;
+      gap: 10px;
+      flex-wrap: wrap;
+
+    }
+
+    .glem-btn {
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 5px;
+      border: 1px solid #E21111;
+      cursor: pointer;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+     .glem-btn.primary {
+        border:none;
+      background: #E21111;
+      color: #000;
+    }
+    .glem-btn.primary:hover {
+      background: #000;
+      color: #fff;
+    }
+
+
+    .glem-btn.outline {
+      background: transparent;
+      color: #E21111;
+    }
+
+    .glem-features {
+      display: flex;
+      gap: 10px;
+      padding: 100px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .glem-feature {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .glem-feature img {
+      margin-bottom: 15px;
+    }
+
+    .glem-feature h4 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .glem-feature p {
+      font-size: 14px;
+      color: #555;
+    }
+     .glem-section a {
+       font-size: 16px!important; 
+    }
+    
+@media (max-width: 992px) {
+  .glem-about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .glem-section {
+      padding: 100px 10px;
+      margin: auto;
+    }
+
+  .glem-about-info {
+    order: 2;
+  }
+
+  .glem-about-image {
+    order: 1;
+  }
+
+  .glem-about-text {
+      margin-top: -80px;
+      text-align: center ;
+    padding-top: 0;
+  }
+
+  .glem-buttons {
+    padding-top: 30px;
+    justify-content: center;
+  }
+
+  .h2 {
+    font-size: 30px;
+  }
+
+  .glem-feature {
+    min-width: 100%;
+  }
+
+  .glem-features {
+    padding: 50px 20px;
+    gap: 20px;
+  }
+
+  .gelm-section {
+    padding: 50px 20px;
+  }
+
+  .glem-about-text::before {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+    .glem-btn {
+        
+        height: 50px;
+        align-content: center;
+    }
+    .glem-section a{
+        font-family: Cairo;
+    }
+}
+
+@media (max-width: 576px) {
+  .h2 {
+    font-size: 30px;
+    
+  }
+
+  .glem-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .glem-feature p {
+    font-size: 13px;
+  }
+}
+  </style>
+</head>
+<body>
+  <section class="glem-section">
+    <h2 class="h2"> 
+      من هو مركز صيانة دايو في مصر ولماذا نحن الأفضل؟
+       </h2>
+    <div class="glem-about-grid">
+      <div class="glem-about-info">
+        <div class="glem-about-text">
+          <p>
+
+           إذا كنت تبحث عن مركز صيانة معتمد لأجهزة دايو في مصر، فنحن في 
+           Daewoo Egypt نقدم لك الحل الأمثل. نغطي جميع مناطق الجمهورية بفريق متخصص من المهندسين المعتمدين في صيانة غسالات دايو، ثلاجات، ميكروويف،
+            سخانات وغيرها من الأجهزة المنزلية. نستخدم قطع غيار كورية أصلية ونوفر دعمًا فنيًا فوريًا عبر الخط الساخن <a href="https://daewoo-eg.com/ar/%d8%a7%d8%aa%d8%b5%d9%84-%d8%a8%d9%86%d8%a7/">01211114528</a> لضمان 
+            استعادة كفاءة الجهاز في أسرع وقت. نحن الوكيل المعتمد لصيانة دايو في مصر ونلتزم بتقديم خدمة موثوقة وآمنة داخل منزلك، أينما كنت.
+          </p>
+
+          <div class="glem-buttons">
+            <a href="#" class="glem-btn primary open-popup-btn">اطلب صيانة الآن</a>
+            <a href="/المدونة/" class="glem-btn outline">إعرف أكتر</a>
+          </div>
+        </div>
+      </div>
+      <div class="glem-about-image">
+        <img src="https://westinghouse-eg.com/wp-content/uploads/2025/03/real-estate-6900973_1280.jpg" alt="صورة بوتاجاز">
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

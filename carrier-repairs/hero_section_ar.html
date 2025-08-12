@@ -1,0 +1,207 @@
+  <html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>مركز صيانة كاريير</title>
+
+    <!-- Cairo font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+      :root{
+        --brand:#1e56ff;         /* لون كلمة كاريير */
+        --text:#0f1222;
+        --muted:#6b7280;
+        --bg:#f8fafc;
+        --btn:#18479E;           /* زر اطلب صيانة الآن */
+        --btn-dark:#000000;
+        --card:#ffffff;
+        --shadow:0 20px 50px rgba(2,14,39,.10);
+        --radius:18px;
+      }
+
+      *{box-sizing:border-box}
+      html,body{margin:0;background:#fff;color:var(--text);font-family:"Cairo",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
+      img{max-width:100%;display:block}
+
+      /* ===== Hero Section ===== */
+      .hero{
+        position:relative;
+        overflow:hidden;
+        padding:64px 20px;
+        background:
+    radial-gradient(1200px 500px at 15% 20%, #eaf1ff 0%, transparent 70%),
+    linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
+    background-image: url('https://carrier-repairs.com/wp-content/uploads/2025/08/hero_background.jpg');
+          background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+      }
+
+      .hero-container{
+          
+
+        max-width:1200px;
+        margin-inline:auto;
+        display:grid;
+        grid-template-columns: 1.1fr 1fr; /* يمين نص – شمال صورة */
+        gap:48px;
+        align-items:center;
+      }
+
+      /* ===== Right content (headings + actions) ===== */
+      .hero-copy h1{
+        margin:0 0 16px;
+        font-size:clamp(28px, 4.2vw, 46px);
+        line-height:1.25;
+        font-weight:900;
+        letter-spacing:.2px;
+        text-align: right;
+      }
+      .hero-copy h1 .brand{
+        
+        color:var(--brand);
+        text-underline-offset:4px;
+      }
+
+      .hero-copy h2{
+              text-align: right;
+
+        margin:0 0 18px;
+        color:var(--text);
+        font-size:clamp(22px, 3.2vw, 36px);
+        font-weight:800;
+      }
+
+      .hero-copy p{
+        text-align: right;
+        margin:0 0 26px;
+        font-size:18px;
+        color:var(--muted);
+        line-height:1.9;
+      }
+
+      .actions{
+        margin-top: 60px;
+        display:flex;
+        gap:14px;
+        flex-wrap:wrap;
+      }
+      .btn{
+        appearance:none;
+        border:0;
+        border-radius:12px;
+        padding:14px 22px;
+        font-weight:700;
+        cursor:pointer;
+        transition:.2s ease;
+        text-decoration: none;
+      }
+      .btn-primary{
+        background:var(--btn);
+        color:#fff;
+        box-shadow:0 10px 25px rgba(14,165,233,.25);
+      }
+      .btn-primary:hover{ background:var(--btn-dark) }
+
+      .btn-ghost{
+        background:#fff;
+        border:1px solid #e6ebf5;
+        color:#10b981;
+        display:flex;
+        align-items:center;
+        gap:8px;
+      }
+      .btn-ghost:hover{ box-shadow:0 6px 20px rgba(2,14,39,.06) }
+
+      .btn-ghost svg{ width:18px;height:18px }
+
+      /* ===== Left visual (image + floating rating cards) ===== */
+      .visual{
+        position:relative;
+        min-height:420px;
+      }
+
+      /* دائرة خلفية خفيفة */
+      .blob{
+        position:absolute;
+        inset:auto auto 0 0;
+        width:360px; height:360px;
+        border-radius:50%;
+        filter:blur(4px) saturate(110%);
+        opacity:.18;
+        transform:translate(-10%, 8%);
+        pointer-events:none;
+      }
+
+      /* === Placeholder: صورة العمال + المكيّف === */
+    .main-shot {
+    position:absolute;
+    left:0; 
+    right:auto;
+    bottom:0;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius:22px;
+    overflow:hidden;
+  }
+
+
+
+      /* ====== Responsive ====== */
+      @media (max-width: 1024px){
+        .hero-container{ grid-template-columns: 1fr; gap:34px }
+        .visual{ min-height:380px }
+  
+      }
+
+      @media (max-width: 768px){
+        .hero{ padding:42px 16px }
+        .visual{ min-height:340px ; grid-row: 1;}
+        .main-shot{ width:100% ; height: auto;left:0 }
+        .actions .btn{ width:100%; justify-content:center }
+      }
+    </style>
+  </head>
+  <body>
+
+    <section class="hero">
+      <div class="hero-container">
+        <!-- النصوص -->
+        <div class="hero-copy">
+          <h1>مركز صيانة <span class="brand">كاريير</span> لخدمات</h1>
+          <h2>صيانة التكييفات</h2>
+
+          <p>كارير مصر لخدمات صيانة التكييفات صيانة مضمونة.. بأيدي خبراء.</p>
+
+          <div class="actions">
+            <button class="btn btn-primary">اطلب صيانة الآن</button>
+            <a class="btn btn-ghost" href="https://api.whatsapp.com/send/?phone=201211114528" target="_blank" rel="noopener">
+              <!-- أيقونة واتساب بسيطة -->
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.52 3.48A11.88 11.88 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.1.55 4.12 1.6 5.92L0 24l6.24-1.63A11.93 11.93 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.2-3.48-8.52ZM12 22a9.9 9.9 0 0 1-5.05-1.4l-.36-.2-3.7.97.99-3.6-.24-.37A9.95 9.95 0 1 1 22 12c0 5.52-4.48 10-10 10Zm5.55-6.82c-.3-.15-1.78-.88-2.05-.98-.27-.1-.47-.15-.67.16-.2.3-.77.98-.94 1.18-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.5-1.77-1.68-2.06-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.23-.24-.58-.49-.5-.67-.5-.17 0-.37 0-.57 0-.2 0-.52.07-.8.37-.27.3-1.05 1.03-1.05 2.52s1.08 2.92 1.23 3.12c.15.2 2.13 3.26 5.16 4.56.72.31 1.28.5 1.72.64.72.23 1.37.2 1.88.12.57-.09 1.78-.72 2.03-1.41.25-.7.25-1.29.17-1.41-.08-.12-.27-.2-.57-.35Z"/>
+              </svg>
+              اتصل بنا
+            </a>
+          </div>
+        </div>
+
+        <!-- الصورة + كروت التقييم -->
+        <!-- ===== Left visual (single merged image) ===== -->
+  <div class="visual">
+    <div class="blob" aria-hidden="true"></div>
+
+    <!-- Single merged image (main + ratings) -->
+    <div class="main-shot" 
+        style="background:transparent url('https://carrier-repairs.com/wp-content/uploads/2025/08/hero_section_ar.png') center/cover no-repeat;" 
+        title="Carrier Maintenance - Merged Image">
+    </div>
+  </div>
+
+      </div>
+    </section>
+
+  </body>
+  </html>

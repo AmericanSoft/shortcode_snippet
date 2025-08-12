@@ -1,0 +1,124 @@
+  <style>
+   
+    .discount-offer {
+      display: flex;
+      align-items: center;
+      padding: 100px 100px;
+      margin: auto;
+      gap: 60px;
+    }
+
+    .discount-images {
+      position: relative;
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .discount-images img:first-child {
+      width: 100%;
+      border-radius: 8px;
+      position: absolute;
+      top: 0;
+      z-index: 1;
+    }
+
+    .discount-images img:last-child {
+      width: 100%;
+      border-radius: 8px;
+      position: relative;
+      transform: translate(10%,10%);
+      z-index: 2;
+    }
+
+    .discount-text {
+      flex: 1;
+    }
+
+    .discount-text h2 {
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    .discount-text h2 span {
+      color: #CD1719;
+    }
+
+    .discount-text h2::before {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: #CD1719;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+
+    .discount-text p {
+      font-size: 16px;
+      color: #333;
+     padding-bottom: 50px;
+
+    }
+
+    
+
+    .btn-primary:hover {
+      background-color: #a81214;
+      color: white;
+    }
+
+@media (max-width: 992px) {
+  .discount-offer {
+    flex-direction: column-reverse;
+    padding: 50px 20px;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .discount-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .discount-text h2 {
+    font-size: 22px;
+    line-height: 1.5;
+  }
+
+  .discount-text h2::before {
+    margin: 0 auto 10px;
+  }
+
+  .discount-text p {
+    font-size: 15px;
+    padding-bottom: 30px;
+  }
+
+  .discount-images {
+    width: 100%;
+  }
+
+ 
+  .discount-images img:last-child {
+    transform: translate(2%,15%);
+  }
+}
+
+  </style>
+</head>
+<body>
+
+<section class="discount-offer">
+  <div class="discount-text">
+    <h2>Limited Time Discount on <span>Maintenance Services!</span></h2>
+    <p>Book your appliance maintenance today and enjoy a special discount, including a full inspection and free fault diagnosis.</p>
+    <a href="#" class="glem-btn primary open-popup-btn">Book Maintenance</a>
+  </div>
+  <div class="discount-images">
+    <img src="https://glemgas-eg.com/wp-content/uploads/2025/07/about-us-1-en.jpg" alt="Cooker Image">
+  </div>
+</section>
+
+
+</body>

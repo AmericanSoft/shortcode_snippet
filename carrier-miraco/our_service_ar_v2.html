@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>خدماتنا</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 40px 20px;
+    }
+
+    .services-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 72px;
+    }
+
+    .services-title {
+      font-size: 48px;
+      font-weight: 700;
+      color: black;
+      text-align: center;
+    }
+
+    .services-columns {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 80px;
+      width: 100%;
+    }
+
+    .services-row {
+      display: inline-flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .service-card {
+      width: 400px;
+      height: 485px;
+      position: relative;
+    }
+
+    .service-box {
+      position: absolute;
+      top: 55px;
+      left: 0;
+      padding: 84px 43px 28px;
+      background: white;
+      border-radius: 12px;
+      outline: 2px solid #18479E;
+      outline-offset: -2px;
+      display: inline-flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .service-box-content {
+      width: 314px;
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 44px;
+    }
+
+    .service-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-end;
+      gap: 21px;
+      align-self: stretch;
+    }
+
+    .service-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: black;
+      text-align: right;
+    }
+
+    .service-desc {
+      font-size: 20px;
+      font-weight: 400;
+      color: #6B7280;
+      text-align: right;
+    }
+
+    .service-button {
+      align-self: stretch;
+      height: 60px;
+      padding: 16px;
+      background: #18479E;
+      border-radius: 8px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .service-button:hover {
+      background: #123b87;
+    }
+
+    .service-button-text {
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      padding: 33px;
+      position: absolute;
+      top: 0;
+      left: 243px;
+      background: white;
+      border-radius: 8px;
+      outline: 2px solid #18479E;
+      outline-offset: -2px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .service-icon img {
+      width: 50px;
+      height: 50px;
+    }
+
+    @media (max-width: 768px) {
+      .services-row {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .service-card {
+        width: 100%;
+        max-width: 400px;
+      }
+
+      .service-icon {
+        left: auto;
+        right: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="services-container">
+    <div class="services-title">خدماتنا</div>
+
+    <div class="services-columns">
+
+      <div class="services-row">
+        <!-- استشارات فنية مجانية -->
+        <div class="service-card">
+          <div class="service-box">
+            <div class="service-box-content">
+              <div class="service-text">
+                <div class="service-title">استشارات فنية مجانية</div>
+                <div class="service-desc">مش لازم تكون خبير علشان تحافظ على جهازك. فريق خدمة العملاء والفنيين بتوعنا جاهزين يردوا على كل استفساراتك ويوجهوك للحل المناسب</div>
+              </div>
+              <div class="service-button">
+                <div class="service-button-text">اطلب صيانة الآن</div>
+              </div>
+            </div>
+          </div>
+          <div class="service-icon">
+            <img src="https://placehold.co/69x69" alt="icon">
+          </div>
+        </div>
+
+        <!-- إصلاح الأعطال الفورية -->
+        <div class="service-card">
+          <div class="service-box">
+            <div class="service-box-content">
+              <div class="service-text">
+                <div class="service-title">إصلاح الأعطال الفورية</div>
+                <div class="service-desc">لو التكييف وقف فجأة أو بدأ يطلع صوت أو ريحة غريبة، الفنيين المعتمدين بتوعنا بيوصلوا لك بسرعة، بيكشفوا على العطل ويصلحوه في أسرع وقت</div>
+              </div>
+              <div class="service-button">
+                <div class="service-button-text">اطلب صيانة الآن</div>
+              </div>
+            </div>
+          </div>
+          <div class="service-icon">
+            <img src="https://placehold.co/48x48" alt="icon">
+          </div>
+        </div>
+
+        <!-- صيانة دورية للتكييف -->
+        <div class="service-card">
+          <div class="service-box">
+            <div class="service-box-content">
+              <div class="service-text">
+                <div class="service-title">صيانة دورية للتكييف</div>
+                <div class="service-desc">خدمة مهمة للحفاظ على عمر التكييف وكفاءته. بنراجع كل جزء في الجهاز، من الفلاتر للوحدة الخارجية، ونتأكد إن كل حاجة شغالة تمام قبل الصيف أو الشتاء</div>
+              </div>
+              <div class="service-button">
+                <div class="service-button-text">اطلب صيانة الآن</div>
+              </div>
+            </div>
+          </div>
+          <div class="service-icon">
+            <img src="https://placehold.co/67x67" alt="icon">
+          </div>
+        </div>
+      </div>
+
+      <div class="services-row">
+        <!-- تركيب تكييفات جديدة -->
+        <div class="service-card">
+          <div class="service-box">
+            <div class="service-box-content">
+              <div class="service-text">
+                <div class="service-title">تركيب تكييفات جديدة</div>
+                <div class="service-desc">سواء شاري تكييف جديد أو ناقل جهازك من مكان لمكان، بنقدملك خدمة تركيب احترافية، مع اختبار شامل للجهاز بعد التركيب</div>
+              </div>
+              <div class="service-button">
+                <div class="service-button-text">اطلب صيانة الآن</div>
+              </div>
+            </div>
+          </div>
+          <div class="service-icon">
+            <img src="https://placehold.co/48x48" alt="icon">
+          </div>
+        </div>
+
+        <!-- استبدال قطع الغيار -->
+        <div class="service-card">
+          <div class="service-box">
+            <div class="service-box-content">
+              <div class="service-text">
+                <div class="service-title">استبدال قطع الغيار</div>
+                <div class="service-desc">بنستخدم قطع غيار أصلية 100% من الشركة الأم لضمان جودة الصيانة وطول عمر الجهاز. أي قطعة بيتم تغييرها بتيجي بضمان</div>
+              </div>
+              <div class="service-button">
+                <div class="service-button-text">اطلب صيانة الآن</div>
+              </div>
+            </div>
+          </div>
+          <div class="service-icon">
+            <img src="https://placehold.co/63x63" alt="icon">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

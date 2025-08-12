@@ -1,0 +1,161 @@
+ <style>
+    .gelm-section {
+      padding: 100px 100px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 30px;
+      position: relative;
+      text-align: center;
+    }
+
+    h2::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      transform: translateY(-50%);
+      width: 100px;
+      height: 10%;
+      border-radius: 25px;
+      background: #CD1719;
+    }
+
+    .glem-about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .glem-about-image img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .glem-about-info {
+      display: flex;
+      }
+
+    .glem-about-text p {
+      margin-bottom: 20px;
+      font-size: 16px;
+      line-height: 1.8;
+      display: block;
+      
+      
+    }
+
+    .glem-about-text::before {
+      content: '';
+      position: absolute;
+      right: 30px;
+      width: 4px;
+      height: 10%;
+      border-radius: 25px;
+      background: #CD1719;
+    }
+
+    .glem-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .glem-btn {
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 5px;
+      border: 1px solid red;
+      cursor: pointer;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+
+    .glem-btn.primary {
+      background: red;
+      color: #fff;
+    }
+
+    .glem-btn.outline {
+      background: transparent;
+      color: red;
+    }
+
+    .glem-features {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .glem-feature {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .glem-feature img {
+      margin-bottom: 15px;
+    }
+
+    .glem-feature h4 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .glem-feature p {
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <section class="gelm-section">
+    <h2>من نحن ؟</h2>
+    <div class="glem-about-grid">
+      <div class="glem-about-info">
+        <div class="glem-about-text">
+          <p>شركة جليم جاز مصر هي شركة رائدة متخصصة في توزيع وتوريد الغازات الصناعية والغاز الطبيعي المسال في مصر. نحن ملتزمون بتقديم خدمات عالية الجودة تلبي احتياجات عملائنا في مختلف المجالات منذ تأسيسنا. عملنا بجد لتعزيز حلول الغاز التي نقدمها، بالاعتماد على التكنولوجيا الحديثة وأفضل الممارسات في هذا المجال.</p>
+          <div class="glem-buttons">
+            <a href="#" class="glem-btn primary">اطلب صيانة الآن</a>
+            <a href="#" class="glem-btn outline">إعرف أكتر</a>
+          </div>
+        </div>
+      </div>
+      <div class="glem-about-image">
+        <img src="https://glemgas-eg.com/wp-content/uploads/2024/06/Glem-Gas_cooker_ita1.jpg" alt="صورة بوتاجاز">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>ليه تختار جليم جاز ؟</h2>
+    <div class="glem-features">
+      <div class="glem-feature">
+        <img src="https://glemgas-eg.com/wp-content/uploads/2025/07/استجابة-سريعة.png" alt="استجابة">
+        <h4>استجابة سريعة</h4>
+        <p>بنهتم بسرعة التواصل وتنفيذ الخدمة في أقرب وقت ممكن عشان راحتك تهمنا.</p>
+      </div>
+      <div class="glem-feature">
+        <img src="https://glemgas-eg.com/wp-content/uploads/2025/07/فنيين-مدربين.png" alt="فنيين مدربين">
+        <h4>فنيين مدربين</h4>
+        <p>فريقنا خضع لتدريبات دقيقة لضمان جودة الصيانة وسرعة اكتشاف الأعطال.</p>
+      </div>
+      <div class="glem-feature">
+        <img src="https://glemgas-eg.com/wp-content/uploads/2025/07/توكيل-معتمد.png" alt="توكيل رسمي">
+        <h4>توكيل رسمي معتمد</h4>
+        <p>خدمة مضمونة من مركز معتمد رسميًا باستخدام قطع غيار أصلية وموافقة.</p>
+      </div>
+    </div>
+  </section>
+</body>

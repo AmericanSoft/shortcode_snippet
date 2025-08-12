@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>صيانة جليم جاز في التجمع الخامس | مركز صيانة معتمد</title>
+  <meta name="description" content="صيانة معتمدة لبوتاجاز جليم جاز - إصلاح فوري بقطع غيار أصلية - خدمة سريعة في التجمع الخامس">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary: #c10f0f;
+      --primary-dark: #8F0000;
+      --secondary: #2b2b2b;
+      --accent: #25D366;
+      --light: #f8f8f8;
+      --text: #333;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Tajawal', sans-serif;
+      background-color: var(--light);
+      color: var(--text);
+      line-height: 1.7;
+      direction: rtl;
+    }
+    
+    /* Header */
+    .header {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center/cover;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    
+    .header p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    
+    /* Features Section */
+    .features {
+      margin: 3rem 0;
+    }
+    
+    .section-title {
+      text-align: center;
+      color: var(--primary-dark);
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      position: relative;
+      padding-bottom: 1rem;
+    }
+    
+    .section-title:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 50%;
+      transform: translateX(50%);
+      width: 100px;
+      height: 3px;
+      background: var(--primary);
+    }
+    
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 2rem;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+      border-top: 4px solid var(--primary);
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    
+    .card h3 {
+      color: var(--primary-dark);
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+    
+    /* CTA Section */
+    .cta-section {
+      background-color: var(--secondary);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      margin-top: 3rem;
+      border-radius: 10px;
+    }
+    
+    .cta-title {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--accent);
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      font-weight: 500;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s;
+      margin-top: 1rem;
+      gap: 10px;
+    }
+    
+    .whatsapp-btn:hover {
+      background-color: #128C7E;
+      transform: scale(1.05);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    .whatsapp-icon {
+      width: 24px;
+      height: 24px;
+    }
+    
+    /* Benefits Grid */
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 3rem 0;
+    }
+    
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    
+    .benefit-icon {
+      color: var(--primary);
+      font-size: 1.5rem;
+      min-width: 30px;
+    }
+    
+    /* Footer */
+    .footer {
+      background-color: var(--secondary);
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .header h1 {
+        font-size: 2rem;
+      }
+      
+      .section-title {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header/Hero Section -->
+  <header class="header">
+    <h1>مركز صيانة جليم جاز المعتمد</h1>
+    <p>خدمة إصلاح وصيانة بوتاجاز جليم جاز بقطع غيار أصلية - فريق فني متخصص - خدمة سريعة في التجمع الخامس وكل أنحاء القاهرة</p>
+  </header>
+
+  <div class="container">
+    <!-- Features Section -->
+    <section class="features">
+      <h2 class="section-title">لماذا تختار خدمتنا؟</h2>
+      
+      <div class="cards">
+        <div class="card">
+          <h3>إصلاح فوري</h3>
+          <p>فريق فني متخصص يصل إليك في أسرع وقت لفحص وإصلاح بوتاجاز جليم جاز بدقة واحترافية</p>
+        </div>
+        
+        <div class="card">
+          <h3>قطع غيار أصلية</h3>
+          <p>نستخدم فقط قطع غيار معتمدة من شركة جليم جاز لضمان أداء مثالي وعمر أطول للجهاز</p>
+        </div>
+        
+        <div class="card">
+          <h3>ضمان على الإصلاح</h3>
+          <p>نقدم ضمان مكتوب على جميع أعمال الصيانة والإصلاح التي نقوم بها</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section>
+      <h2 class="section-title">مميزات خدمتنا</h2>
+      
+      <div class="benefits-grid">
+        <div class="benefit-item">
+          <span class="benefit-icon">✓</span>
+          <div>
+            <h3>سرعة الاستجابة</h3>
+            <p>إنجاز الأعمال في أقصر وقت ممكن مع الحفاظ على الجودة</p>
+          </div>
+        </div>
+        
+        <div class="benefit-item">
+          <span class="benefit-icon">✓</span>
+          <div>
+            <h3>أحدث التقنيات</h3>
+            <p>استخدام أدوات وتقنيات حديثة لتشخيص وإصلاح الأعطال</p>
+          </div>
+        </div>
+        
+        <div class="benefit-item">
+          <span class="benefit-icon">✓</span>
+          <div>
+            <h3>أسعار تنافسية</h3>
+            <p>عروض وأسعار مناسبة لجميع العملاء مع شفافية كاملة</p>
+          </div>
+        </div>
+        
+        <div class="benefit-item">
+          <span class="benefit-icon">✓</span>
+          <div>
+            <h3>دعم فني متواصل</h3>
+            <p>استشارات ونصائح مجانية للحفاظ على جهازك</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <h2 class="cta-title">احجز خدمة الصيانة الآن</h2>
+      <p>اتصل بنا على مدار الساعة وسنكون في خدمتك</p>
+      <a href="https://api.whatsapp.com/send/?phone=201211114528" class="whatsapp-btn" target="_blank">
+        <svg class="whatsapp-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        تواصل عبر واتساب
+      </a>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>جميع الحقوق محفوظة &copy; مركز صيانة جليم جاز المعتمد <span id="year"></span></p>
+  </footer>
+
+  <script>
+    // Auto-update year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

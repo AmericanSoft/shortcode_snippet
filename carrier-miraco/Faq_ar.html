@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <title>الأسئلة الشائعة والإحصائيات</title>
+  
+  <style>
+    .faq-full {
+        padding: 0;
+      margin: 0;
+      padding-top:100px ;
+      font-family: 'Cairo', sans-serif;
+      background: #f9f9f9;
+      color: #111;
+      align-items: center;
+    }
+
+    .faq-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 200px;
+      margin: 0;
+      padding: 0px 50px;
+    }
+
+    .faq-left {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .faq-title {
+      font-size: 35px!important;
+      font-weight: 700;
+      line-height: 45px!important;
+      color: #1a1a1a;
+      margin-bottom: 10px;
+      text-align: right;
+    }
+    .faq-title::before{
+        display: block;
+        content: '';
+        width: 100px;
+        height: 5px;
+        margin-bottom: 20px;
+        background-color: #18479E;
+        border-radius: 50px;
+    }
+
+    .faq-subtitle {
+      font-size: 16px;
+      color: #6b7280;
+      margin-bottom: 30px;
+    }
+
+    .accordion {
+      border-radius: 12px;
+      background: white;
+      overflow: hidden;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.04);
+    }
+
+    .accordion-item {
+      border-bottom: 1px solid #eee;
+    }
+
+    .accordion-header {
+      background: #fff;
+      cursor: pointer;
+      padding: 16px 20px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 16px;
+    }
+
+    .accordion-header:hover {
+      background: #f0f0f0;
+    }
+
+    .accordion-body {
+      padding: 0 20px 20px;
+      display: none;
+      font-size: 14px;
+      color: #444;
+    }
+    .accordion-body a{
+      font-size: 14px;
+    }
+
+    .accordion-item.active .accordion-body {
+      display: block;
+    }
+
+    .accordion-item.active .accordion-header::after {
+      content: "▲";
+    }
+
+    .accordion-header::after {
+      content: "▼";
+      font-size: 12px;
+    }
+
+    .faq-right img {
+      padding-top: 10px;
+      border-radius: 12px;
+    }
+
+    .stats-bar {
+      background: #000;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
+      padding: 40px 20px;
+    }
+
+    .stat-box {
+      text-align: center;
+      min-width: 150px;
+    }
+
+    .stat-box h3 {
+      font-size: 40px;
+      margin: 0 0 10px;
+      font-weight: 700;
+    }
+
+    .stat-box p {
+      font-size: 25px;
+      margin: 0;
+      color: #bbb;
+    }
+    .faq-right{
+        justify-content: flex-start;
+    }
+    .counter {
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .faq-title{
+        text-align: center;
+        justify-content: center;
+        position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+      }
+      .faq-title::before {
+  content: '';
+  width: 60px;
+  height: 4px;
+  margin-bottom: 10px;
+  background-color: #18479E;
+  border-radius: 50px;
+}
+      .faq-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+      }
+
+      .faq-right img {
+        max-width: 100%;
+      }
+
+      .accordion-header {
+        font-size: 14px;
+        line-height: 1.5;
+        justify-content: center;
+      }
+      .accordion-body {
+        padding: 10px;
+        font-size: 10px;
+      }
+      .accordion-body a{
+      font-size: 10px;
+    
+
+      .accordion-header::after {
+        margin-right: 10px;
+      }
+        .stats-bar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 30px 15px;
+    text-align: center;
+  }
+
+  .stat-box {
+    min-width: unset;
+  }
+
+  .stat-box h3 {
+    font-size: 24px;
+  }
+
+  .stat-box p {
+    font-size: 14px;
+  }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- الأسئلة الشائعة -->
+<div class="faq-full">
+    <section class="faq-section">
+        <div class="faq-right">
+            <img src="https://carrier-miraco.com/wp-content/uploads/2025/08/Yellow-and-White-Modern-Oil-Change-Maintenance-Services-Banner-1000-x-1000-px-1-1.png" alt="فني كاريير">
+        </div>
+        <div class="faq-left">
+            <h2 class="faq-title">متردد؟ اقرأ الأسئلة اللي كل الناس بتسألها</h2>
+            <p class="faq-subtitle">أشهر الأسئلة الشائعة</p>
+
+            <div class="accordion">
+
+  <div class="accordion-item">
+    <div class="accordion-header">صيانة كاريير: كيف أطلب خدمة صيانة فورية لتكييف كاريير؟</div>
+    <div class="accordion-body">
+      صيانة كاريير متاحة الآن من خلال 
+      <a href="https://carrier-miraco.com/ar/" target="_blank">توكيل كاريير الأمريكية جروب المعتمد</a>، فقط اتصل على 
+      <a href="https://carrier-miraco.com/ar/اتصل-بنا/" target="_blank">01211114528</a>
+      لتحصل على خدمة صيانة فورية تشمل الكشف، الإصلاح، وتوفير قطع الغيار الأصلية لجميع أنواع التكييفات سواء كانت شباك أو سبليت أو مركزية.
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <div class="accordion-header">صيانة كاريير المجانية: هل يوجد صيانة مجانية لأجهزة كاريير؟</div>
+    <div class="accordion-body">
+      صيانة كاريير المجانية تكون متاحة إذا كان التكييف داخل فترة الضمان الرسمي من توكيل الأمريكية جروب للصيانة. تأكد من وجود فاتورة الصيانة الأصلية، واتصل على 
+      <a href="https://carrier-miraco.com/ar/اتصل-بنا/" target="_blank">01211114528</a>
+      للاستعلام عن حالة الضمان وخدمة الصيانة المجانية.
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <div class="accordion-header">صيانة كاريير الجيزة: هل يتوفر توكيل صيانة كاريير في الجيزة؟</div>
+    <div class="accordion-body">
+      نعم، تقدم الأمريكية جروب خدمة صيانة كاريير في الجيزة من خلال فروع معتمدة وفنيين متخصصين. اتصل الآن على 
+      <a href="https://carrier-miraco.com/ar/اتصل-بنا/" target="_blank">01211114528</a>
+      لحجز موعد الصيانة أو املأ الفورم 
+      <a href="https://carrier-miraco.com/ar/اتصل-بنا/" target="_blank">من هنا</a>، وسيتم إرسال الفني إلى عنوانك في أسرع وقت.
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <div class="accordion-header">صيانة تكييف كاريير في القاهرة: ما هي مزايا الصيانة داخل القاهرة؟</div>
+    <div class="accordion-body">
+      صيانة تكييف كاريير في القاهرة تتميز بسرعة الاستجابة وخدمة منزلية فورية من خلال فريق مدرّب على أعلى مستوى. فقط تواصل مع توكيل كاريير عبر الخط الساخن 
+      <a href="https://carrier-miraco.com/ar/اتصل-بنا/" target="_blank">01211114528</a>
+      وسيتم تحديد الموعد المناسب لك خلال دقائق.
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <div class="accordion-header">صيانة ميراكو: ما الذي يميز توكيل ميراكو كاريير المعتمد؟</div>
+    <div class="accordion-body">
+      صيانة ميراكو مع توكيل كاريير الأمريكية جروب تضمن لك تجربة صيانة احترافية باستخدام تقنيات حديثة، وقطع غيار أصلية، وضمان رسمي. الحجز متاح عبر الرقم 
+      <a href="https://carrier-miraco.com/ar/اتصل-بنا/" target="_blank">01211114528</a>
+      في جميع المحافظات.
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <div class="accordion-header">موقع كاريير الرسمي: كيف يمكنني حجز الصيانة أونلاين؟</div>
+    <div class="accordion-body">
+      يمكنك زيارة الموقع الرسمي لكاريير لحجز الصيانة إلكترونيًا، أو التواصل عبر الرقم المختصر 
+      <a href="https://carrier-miraco.com/ar/اتصل-بنا/" target="_blank">01211114528</a>
+      للحجز الفوري وخدمة الدعم الفني على مدار الساعة.
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <div class="accordion-header">صيانة تكييف كاريير: ما هي الأعطال التي يمكن إصلاحها؟</div>
+    <div class="accordion-body">
+      تشمل خدمات صيانة تكييف كاريير جميع الأعطال مثل ضعف التبريد، توقف التشغيل، تسريب المياه، أو مشاكل الفلاتر. لدينا خبراء جاهزون للكشف الدقيق والإصلاح باستخدام قطع غيار كاريير الأصلية. احجز الآن على 
+      <a href="https://carrier-miraco.com/ar/اتصل-بنا/" target="_blank">01211114528</a>.
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <div class="accordion-header">خدمة صيانة كاريير: هل الخدمة تشمل كافة أنواع التكييفات؟</div>
+    <div class="accordion-body">
+      نعم، خدمة صيانة كاريير تشمل التكييفات المنزلية، الشباك، السبليت، والتكييفات المركزية والتجارية. تواصل مع فريق خدمة عملاء كاريير على 
+      <a href="https://carrier-miraco.com/ar/اتصل-بنا/" target="_blank">01211114528</a>
+      لتحصل على الدعم المناسب حسب نوع جهازك.
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <div class="accordion-header">دعم على مدار اليوم: هل يتوفر دعم فني تكييف كاريير 24 ساعة؟</div>
+    <div class="accordion-body">
+      بالتأكيد، توفر كاريير مصر دعم على مدار اليوم لجميع العملاء. يمكنك الاتصال في أي وقت عبر الخط الساخن 
+      <a href="https://carrier-miraco.com/ar/اتصل-بنا/" target="_blank">01211114528</a>
+      لحجز الصيانة أو الاستفسار عن الأعطال أو حالة الضمان.
+    </div>
+  </div>
+
+</div>
+
+
+        </div>
+
+        
+    </section>
+
+    <!-- عدادات الإحصائيات -->
+    <section class="stats-bar">
+        <div class="stat-box">
+<h3 class="counter" data-target="1000" data-suffix="+">0</h3>
+            <p>عميل تعاملوا معنا</p>
+        </div>
+        <div class="stat-box">
+<h3 class="counter" data-target="96" data-suffix="%">0</h3>
+            <p>نسبة إرضاء العملاء</p>
+        </div>
+        <div class="stat-box">
+<h3 class="counter" data-target="10" data-suffix="+">0</h3>
+            <p>سنوات الخبرة</p>
+        </div>
+        <div class="stat-box">
+<h3 class="counter" data-target="10" data-suffix="+">0</h3>
+            <p>عملية صيانة تامة</p>
+        </div>
+    </section>
+</div>
+
+  <script>
+    // JavaScript لأكوردين الأسئلة الشائعة
+    document.querySelectorAll('.accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+ <script>
+  function animateCounter(counter) {
+    const target = +counter.getAttribute('data-target');
+    const suffix = counter.getAttribute('data-suffix') || '';
+    const duration = 2000;
+    const increment = Math.ceil(target / (duration / 20));
+    let count = 0;
+
+    const update = () => {
+      count += increment;
+      if (count >= target) {
+        counter.textContent = target + ' ' + suffix;
+      } else {
+        counter.textContent = count + suffix;
+        requestAnimationFrame(update);
+      }
+    };
+
+    update();
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.counter').forEach(counter => {
+      animateCounter(counter);
+    });
+  });
+</script>
+
+</body>

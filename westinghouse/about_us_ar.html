@@ -1,0 +1,224 @@
+ <style>
+    .glem-section {
+      padding: 100px 100px;
+      margin: auto;
+    }
+
+    .h2 {
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 30px;
+      position: relative;
+      text-align: center;
+      padding-bottom: 50px;
+    }
+
+   .h2::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      transform: translateY(-300%);
+      width: 150px;
+      height: 5%;
+      border-radius: 25px;
+      background: #FF7A31;
+    }
+
+    .glem-about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .glem-about-image img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .glem-about-info {
+      display: flex;
+      }
+
+    .glem-about-text p {
+      margin-bottom: 20px;
+      font-size: 16px;
+      line-height: 1.8;
+      display: block;
+     padding-top: 80px;
+
+      
+      
+    }
+
+    .glem-about-text::before {
+      content: '';
+      position: absolute;
+      width: 6px;
+      top: 330px;
+      right: 60px;
+      height: 10%;
+      border-radius: 25px;
+      background: #FF7A31;
+    }
+
+    .glem-buttons {
+      display: flex;
+      padding-top: 100px;
+      gap: 10px;
+      flex-wrap: wrap;
+
+    }
+
+    .glem-btn {
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 5px;
+      border: 1px solid #FF7A31;
+      cursor: pointer;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+
+    .glem-btn.primary {
+      background: #FF7A31;
+      color: #fff;
+    }
+
+    .glem-btn.outline {
+      background: transparent;
+      color: #FF7A31;
+    }
+
+    .glem-features {
+      display: flex;
+      gap: 10px;
+      padding: 100px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .glem-feature {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    .glem-feature img {
+      margin-bottom: 15px;
+    }
+
+    .glem-feature h4 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .glem-feature p {
+      font-size: 14px;
+      color: #555;
+    }
+    
+@media (max-width: 992px) {
+  .glem-about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .glem-section {
+      padding: 100px 10px;
+      margin: auto;
+    }
+
+  .glem-about-info {
+    order: 2;
+  }
+
+  .glem-about-image {
+    order: 1;
+  }
+
+  .glem-about-text {
+      margin-top: -80px;
+      text-align: center ;
+    padding-top: 0;
+  }
+
+  .glem-buttons {
+    padding-top: 30px;
+    justify-content: center;
+  }
+
+  .h2 {
+    font-size: 30px;
+  }
+
+  .glem-feature {
+    min-width: 100%;
+  }
+
+  .glem-features {
+    padding: 50px 20px;
+    gap: 20px;
+  }
+
+  .gelm-section {
+    padding: 50px 20px;
+  }
+
+  .glem-about-text::before {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .h2 {
+    font-size: 30px;
+    
+  }
+
+  .glem-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .glem-feature p {
+    font-size: 13px;
+  }
+}
+  </style>
+</head>
+<body>
+  <section class="glem-section">
+    <h2 class="h2">من نحن – التوكيل الرسمي لصيانة White Westinghouse في مصر
+؟</h2>
+    <div class="glem-about-grid">
+      <div class="glem-about-info">
+        <div class="glem-about-text">
+          <p>
+           نحن <a href="https://westinghouse-eg.com/ar/" style="font-weight: 700;">توكيل وستنجهاوس المعتمد في مصر</a>، نُقدّم خدمات صيانة متكاملة لكافة أجهزة 
+           <a href="https://westinghouse-eg.com/en/" style="font-weight: 700;">White Westinghouse</a> المنزلية، بما يشمل الثلاجات، الديب فريزر، الغسالات، الأفران، الميكروويف، الشاشات، وغيرها.
+            نعتمد على فريق فني معتمد ومدرّب على أعلى مستوى لتقديم حلول صيانة احترافية تضمن الكفاءة والأمان لأجهزتك.
+            جميع أعمالنا تتم باستخدام قطع غيار أصلية 100% مضمونة من الشركة الأم، وتحت إشراف هندسي مباشر. نحن ندرك جيدًا
+            أهمية كل جهاز داخل منزلك، لذلك نعمل بدقة وسرعة للحفاظ على راحة بالك وضمان عمر أطول لجهازك،
+            ضمن معايير عالمية ومعتمدة من white westinghouse global service.
+
+          </p>
+
+          <div class="glem-buttons">
+            <a href="#" class="glem-btn primary open-popup-btn">اطلب صيانة الآن</a>
+            <a href="/المدونة/" class="glem-btn outline">إعرف أكتر</a>
+          </div>
+        </div>
+      </div>
+      <div class="glem-about-image">
+        <img src="https://westinghouse-eg.com/wp-content/uploads/2025/03/real-estate-6900973_1280.jpg" alt="صورة بوتاجاز">
+      </div>
+    </div>
+  </section>
+
+</body>

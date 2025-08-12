@@ -1,0 +1,139 @@
+<section class="features" dir="rtl">
+  <div class="container">
+    <h2 class="features-title">ما يميزنا ؟</h2>
+
+    <div class="features-grid">
+      <!-- 1 -->
+      <article class="feature-card">
+        <div class="icon">
+          <img src="https://carrier-repairs.com/wp-content/uploads/2025/08/feature1.png" alt="ضمان على الخدمة">
+        </div>
+        <h3>ضمان على الخدمة</h3>
+        <p>نوفر لك ضمانًا على الخدمة بعد كل عملية صيانة عشان تكون مطمئن.</p>
+      </article>
+
+      <!-- 2 -->
+      <article class="feature-card">
+        <div class="icon">
+          <img src="https://carrier-repairs.com/wp-content/uploads/2025/08/feature2.png" alt="تغطية شاملة">
+        </div>
+        <h3>تغطية شاملة</h3>  
+        <p>لكل مناطق القاهرة الكبرى من خلال فروعنا المنتشرة لضمان السرعة.</p>
+      </article>
+
+      <!-- 3 -->
+      <article class="feature-card">
+        <div class="icon">
+          <img src="https://carrier-repairs.com/wp-content/uploads/2025/08/feature3.png" alt="دعم فني متواصل">
+        </div>
+        <h3>دعم فني متواصل</h3>
+        <p>لحل مشاكلك الفنية بدعم مستمر على مدار اليوم.</p>
+      </article>
+
+      <!-- 4 -->
+      <article class="feature-card">
+        <div class="icon">
+          <img src="https://carrier-repairs.com/wp-content/uploads/2025/08/feature4.png" alt="أسطول صيانة كبير">
+        </div>
+        <h3>أسطول صيانة كبير</h3>
+        <p>سيارات مجهزة بالكامل لضمان تقديم خدمة عالية الجودة.</p>
+      </article>
+
+      <!-- 5 -->
+      <article class="feature-card">
+        <div class="icon">
+          <img src="https://carrier-repairs.com/wp-content/uploads/2025/08/feature5.png" alt="الالتزام بالمواعيد">
+        </div>
+        <h3>قطع غيار أصلية</h3>
+        <p>متوفرة بشكل دائم لضمان عمر أطول لجهازك وأداء أفضل.</p>
+
+      </article>
+
+      <!-- 6 -->
+      <article class="feature-card">
+        <div class="icon">
+          <img src="https://carrier-repairs.com/wp-content/uploads/2025/08/feature6.png" alt="قطع غيار أصلية">
+        </div>
+        <h3>الالتزام بالمواعيد</h3>
+        <p>سرعة في الأداء والتزام بالمواعيد لأن وقتك مهم بالنسبة لنا.</p>
+
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
+
+  .features{
+    background:#ffffff;
+    padding:48px 16px 64px;
+    font-family:"Cairo",system-ui,Arial;
+    color:#0f1222;
+  }
+  .features .container{
+    max-width:1100px;margin:0 auto;
+  }
+  .features-title{
+    text-align:center;
+    font-size:28px;
+    font-weight:900;
+    margin:0 0 28px;
+  }
+
+  .features-grid{
+    display:grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap:18px 22px;
+    justify-items:stretch;
+  }
+
+  .feature-card{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background:#fff;
+    border:1px solid #eef1f6;
+    border-radius:14px;
+    padding:18px 18px 20px;
+    box-shadow:0 4px 14px rgba(0,0,0,.05);
+    transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+  }
+  .feature-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 24px rgba(0,0,0,.08);
+    border-color:#e6ebf5;
+  }
+
+  .icon{
+    width:44px;height:44px;border-radius:12px;
+    background:#f1f5ff;
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:10px;
+  }
+  .icon img{width:28px;height:28px;object-fit:contain}
+
+  .feature-card h3{
+    margin:0 0 6px;
+    font-size:16px;
+    font-weight:800;
+  }
+  .feature-card p{
+    margin:0;
+    font-size:13.5px;
+    line-height:1.9;
+    color:#6b7280;
+  }
+
+  /* Responsive */
+  @media (max-width: 992px){
+    .features-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
+  }
+  @media (max-width: 560px){
+    .features-title{ font-size:22px; }
+    .features-grid{ grid-template-columns: 1fr; gap:14px; }
+    .feature-card{ padding:16px }
+  }
+</style>

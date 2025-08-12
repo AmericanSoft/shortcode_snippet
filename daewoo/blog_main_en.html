@@ -1,0 +1,563 @@
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    .container,
+    .posts-container {
+      margin: auto;
+      margin-top: 20px;
+      max-width: 1200px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .title,
+    .posts-title {
+      font-size: 30px;
+      text-align: center;
+      position: relative;
+      margin-bottom: 40px;
+      padding-bottom: 10px;
+    }
+
+    .title::after,
+    .posts-title::after {
+      content: '';
+      width: 100px;
+      height: 3px;
+      background-color: #E21111;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .articles {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 20px;
+    }
+
+    .main-article img {
+      width: 612px;
+      height: 335px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .main-article h3 {
+      margin-top: 10px;
+      font-size: 20px;
+      color: #E21111;
+    }
+
+    .main-article {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .side-articles .side-article {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 50px;
+      padding-bottom: 10px;
+      align-items: stretch;
+    }
+
+    .side-article img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .side-article h4 {
+      margin: 0 0 5px;
+      font-size: 16px;
+    }
+
+    .side-article p {
+      margin: 5px 0;
+      color: #666;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .side-article small {
+      color: #888;
+      font-size: 13px;
+    }
+
+    .more-link {
+      color: #E21111;
+      text-decoration: none;
+    }
+
+    .posts-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .posts-filters button {
+    font-size: 20px;
+      padding: 8px 20px;
+      border-radius: 25px;
+      border: 1px solid #E21111;
+      background-color: transparent;
+      color: #E21111;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .posts-filters button.active,
+    .posts-filters button:hover {
+      background-color: #E21111;
+      color: white;
+    }
+
+    .posts-articles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .post-card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      height: 100%;
+      text-decoration: none;
+    }
+
+    .post-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .post-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .post-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 13px;
+      color: #6B7281;
+      padding: 8px 12px;
+    }
+
+    .post-card-content {
+      padding: 15px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+    }
+
+    .post-card-content h3 {
+      font-size: 16px;
+      margin: 0 0 10px;
+      color: #121212;
+    }
+
+    .post-card-content p {
+      color: #6B7281;
+      font-size: 13px;
+      flex-grow: 1;
+    }
+
+    .post-more-link {
+      display: block;
+      margin-top: 10px;
+      background-color: #E21111;
+      color: #fff;
+      padding: 8px 0;
+      text-align: center;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .post-load-more {
+      text-align: center;
+      margin-top: 30px;
+      color: #E21111;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+     .loader , .loader22{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 200px;
+      font-size: 18px;
+      color: #E21111;
+    }
+
+@media (max-width: 992px) {
+  .main-article img {
+    width: 100%;
+    height: auto;
+  }
+
+  .articles {
+    grid-template-columns: 1fr;
+  }
+
+  .side-articles .side-article {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .posts-filters {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding-bottom: 10px;
+    scrollbar-width: thin;
+  }
+
+  .posts-filters button {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .post-card {
+    min-width: 260px;
+  }
+}
+
+@media (max-width: 576px) {
+  .posts-title,
+  .title {
+    font-size: 24px;
+  }
+
+  .main-article h3 {
+    font-size: 18px;
+  }
+
+  .side-article h4 {
+    font-size: 14px;
+  }
+
+  .post-card-content h3 {
+    font-size: 14px;
+  }
+
+  .post-card-content p {
+    font-size: 12px;
+  }
+
+  .posts-filters {
+    gap: 6px;
+  }
+
+  .posts-filters button {
+    padding: 6px 14px;
+    font-size: 16px;
+  }
+
+  .post-load-more {
+    font-size: 16px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 class="title">Latest Articles</h2>
+    <div id="loader" class="loader">Loading...</div>
+    <div class="articles" style="display: none;" id="articles">
+      <div class="main-article" id="main-article"></div>
+      <div class="side-articles" id="side-articles"></div>
+    </div>
+  </div>
+
+  <div class="posts-container">
+    <h2 class="posts-title">Article Categories</h2>
+    <div class="posts-filters" id="categoryFilters"></div>
+    <div class="posts-articles" style="display:none;" id="category-articles"></div>
+    <div id="loader22" class="loader22">Loading...</div>
+    <div class="post-load-more" onclick="loadMore()" id="loadMoreBtn">Show More <i class="fa-solid fa-chevron-down"></i></div>
+  </div>
+
+  <script>
+    const apiUrl = 'https://daewoo-eg.com/wp-json/wp/v2/posts?_embed&_fields=title,excerpt,link,date,featured_image_url';
+    const categoriesUrl = 'https://daewoo-eg.com/wp-json/wp/v2/categories';
+    let page = 1;
+    let selectedCategoryId = null;
+
+    function formatDateTime(date) {
+      const d = new Date(date);
+      return {
+        dateString: d.toLocaleDateString('en-GB').replace(/\//g, ' - '),
+        timeString: d.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true })
+      };
+    }
+	  function isEnglishPost(posts) {
+        return posts.filter(post => post.link.includes('/en/'));
+    }
+
+    function renderMainArticle(post) {
+      const { dateString, timeString } = formatDateTime(post.date);
+      return `
+        <a href="${post.link}" style="text-decoration: none; color: inherit;">
+          <img src="${post.featured_image_url}" alt="${post.title.rendered}">
+          <small style="direction: ltr; display: inline-flex; align-items: center; gap: 6px; justify-content:end; margin-top: 10px;">
+            <span>${timeString}</span>
+            <i class="fa-regular fa-clock"></i>
+            <span>${dateString}</span>
+            <i class="fa-regular fa-calendar-days"></i>
+          </small>
+          <h3>${post.title.rendered}</h3>
+          <p style="margin-top: 0; font-size: 24px; color: #7A7A7A;">
+            ${post.excerpt.rendered.replace(/<[^>]+>/g, '').slice(0, 120)}..<span class="more-link">More</span>
+          </p>
+        </a>
+      `;
+    }
+
+    function renderSideArticle(post) {
+      const { dateString, timeString } = formatDateTime(post.date);
+      const excerpt = post.excerpt.rendered.replace(/<[^>]+>/g, '').slice(0, 100);
+      return `
+        <a href="${post.link}" style="text-decoration: none; color: inherit;">
+          <div class="side-article">
+            <img src="${post.featured_image_url}" alt="${post.title.rendered}">
+            <div style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <h4>${post.title.rendered}</h4>
+                <p style="font-size: 16px; color: #7A7A7A;">${excerpt}<span class="more-link"> More..</span></p>
+              </div>
+              <small style="direction: ltr; display: inline-flex; align-items: center; gap: 6px; justify-content:end;">
+                <span>${timeString}</span>
+                <i class="fa-regular fa-clock"></i>
+                <span>${dateString}</span>
+                <i class="fa-regular fa-calendar-days"></i>
+              </small>
+            </div>
+          </div>
+        </a>
+      `;
+    }
+
+    function renderCard(post) {
+      const { dateString, timeString } = formatDateTime(post.date);
+      const excerpt = post.excerpt.rendered.replace(/<[^>]+>/g, '').slice(0, 100);
+      return `
+        <a href="${post.link}" class="post-card">
+          <img src="${post.featured_image_url}" alt="${post.title.rendered}">
+          <div class="post-meta">
+              <small style="direction: rtl; display: inline-flex; align-items: center; gap: 6px; justify-content:end;">
+                
+                <span>${dateString}</span>
+                <i class="fa-regular fa-calendar-days"></i>
+<span>${timeString}</span>
+                <i class="fa-regular fa-clock"></i>
+              </small>
+          </div>
+          <div class="post-card-content">
+            <h3>${post.title.rendered}</h3>
+            <p>${excerpt}...</p>
+            <span class="post-more-link">Show More</span>
+          </div>
+        </a>
+      `;
+    }
+
+    function showArticles(posts) {
+      if (!posts.length) return;
+      document.getElementById('main-article').innerHTML = renderMainArticle(posts[0]);
+      document.getElementById('side-articles').innerHTML = posts.slice(1, 4).map(renderSideArticle).join('');
+    }
+
+    function showLoader(show) {
+      document.getElementById('loader').style.display = show ? 'flex' : 'none';
+    }
+
+    function showArticlesSection(show) {
+      document.getElementById('articles').style.display = show ? 'grid' : 'none';
+    }
+
+    function loadArticles(reset = false, btn = null) {
+      const categoryParam = selectedCategoryId ? `&categories=${selectedCategoryId}` : '';
+      const container = document.getElementById('category-articles');
+      
+
+      if (reset) {
+        container.innerHTML = '';
+        page = 1;
+        btn = document.getElementById('loadMoreBtn');
+        btn.innerHTML = 'Show More <i class="fa-solid fa-chevron-down"></i>';
+        btn.disabled = false;
+      }
+
+      document.getElementById('loader22').style.display = 'flex';
+
+
+      const cacheFilterdKey = `${page}${categoryParam}${selectedCategoryId}`;
+      const cachedFilterdData = getCache(cacheFilterdKey);
+
+      if(cachedFilterdData){
+        showFiltterdArticles(cachedFilterdData, btn,container);
+      } else {
+
+        fetch(`${apiUrl}&page=${page}${categoryParam}`)
+        .then(r => r.json())
+		.then(isEnglishPost)
+        .then(posts => {
+          setCache(cacheFilterdKey, posts, 30); 
+          showFiltterdArticles(posts, btn,container);
+        })
+        .catch(e => {
+          console.error('Error:', e);
+          btn.innerText = 'Error loading articles, please try again.';
+          btn.disabled = false;
+        });
+
+      }
+
+
+      
+    }
+    function showFiltterdArticles(filteredPosts,btn,container) {
+        document.getElementById('loader22').style.display = 'none';
+          if (filteredPosts.length === 0) {
+            btn.innerText = 'No More Articles';
+            btn.disabled = true;
+            return;
+          }
+
+          container.innerHTML += filteredPosts.map(renderCard).join('');
+          container.style.display = 'grid';
+          
+          btn.innerHTML = 'Read More <i class="fa-solid fa-chevron-down"></i>';
+          btn.disabled = false;
+    }
+
+
+
+    function loadMore() {
+      const btn = document.getElementById('loadMoreBtn');
+      btn.innerHTML = 'Loading...';
+      btn.disabled = true;
+      page++;
+      loadArticles(false, btn);
+    }
+
+    function loadCategories() {
+    const cacheCategoryKey = 'main_category_cache_en';
+    const cachedCategoryData = getCache(cacheCategoryKey);
+    if (cachedCategoryData) {
+      showCategoriesSection(cachedCategoryData);
+
+    } else{
+      fetch(categoriesUrl)
+        .then(r => r.json())
+        .then(categories => {
+          setCache(cacheCategoryKey, categories, 30); 
+          showCategoriesSection(categories);
+        })
+    }
+      
+    }
+    function showCategoriesSection(categories) {
+      
+          const filters = document.getElementById('categoryFilters');
+          filters.innerHTML = '<button class="active" onclick="selectCategory(null, this)">All Articles</button>';
+
+          categories
+            .filter(cat => cat.count > 0 && cat.link.includes('/en/') && cat.name !== 'Uncategorized')
+            .forEach(cat => {
+              const btn = document.createElement('button');
+              btn.textContent = cat.name;
+              btn.onclick = () => selectCategory(cat.id, btn);
+              filters.appendChild(btn);
+            });
+        
+    }
+
+    function selectCategory(id, btn) {
+      selectedCategoryId = id;
+      document.querySelectorAll('.posts-filters button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      loadArticles(true);
+    }
+
+function setCache(key, data, ttlMinutes = 30) {
+  const expires = new Date().getTime() + ttlMinutes * 60 * 1000;
+  const cached = { data, expires };
+  localStorage.setItem(key, JSON.stringify(cached));
+}
+
+function getCache(key) {
+  const cached = localStorage.getItem(key);
+  if (!cached) return null;
+
+  try {
+    const { data, expires } = JSON.parse(cached);
+    if (new Date().getTime() > expires) {
+      localStorage.removeItem(key); 
+      return null;
+    }
+    return data;
+  } catch {
+    localStorage.removeItem(key);
+    return null;
+  }
+}
+
+const cacheKey = 'main_articles_cache_en';
+const cachedData = getCache(cacheKey);
+
+if (cachedData) {
+  showLoader(false);
+  showArticlesSection(true);
+  showArticles(cachedData);
+} else {
+  fetch(apiUrl)
+    .then(r => r.json())
+	.then(isEnglishPost)
+    .then(posts => {
+      setCache(cacheKey, posts, 30);  
+      showLoader(false);
+      showArticlesSection(true);
+      showArticles(posts);
+    })
+    .catch(e => {
+      document.getElementById('loader').innerText = 'Error loading articles, please try again.';
+      console.error('Error:', e);
+    });
+}
+	  
+
+    loadCategories();
+    loadArticles();
+  </script>
+</body>
+</html>

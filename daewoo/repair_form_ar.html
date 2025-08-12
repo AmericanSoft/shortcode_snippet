@@ -1,0 +1,259 @@
+
+<!-- ✅ نموذج طلب صيانة عربي (بدون بوب أب) -->
+<div id="contact-form-ar" style="max-width:600px;margin:40px auto;padding:30px;background:#fff;border-radius:20px;box-shadow:0 10px 40px rgba(0,0,0,0.1);font-family:'Cairo',sans-serif;">
+<form class="repairForm-ar">
+    <div id="step1">
+      <div style="text-align:center;margin-bottom:10px;">
+        <span style="font-size:20px;color:#E21111;">●</span>
+        <span style="font-size:20px;color:#ccc;">○</span>
+      </div>
+      <h3 style="text-align:center;color:#E21111;margin-bottom:30px;">نموذج طلب صيانة</h3>
+
+      <input type="text" name="full-name" placeholder="الاسم بالكامل" required style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #ccc;border-radius:8px;">
+			<br>
+
+      <input type="tel" name="phone" placeholder="رقم التليفون (واتساب)" required style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #ccc;text-align:right;border-radius:8px;">
+			<br>
+      <input type="email" name="email" placeholder="البريد الإلكتروني (اختياري)" style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #ccc;border-radius:8px;">
+	<br>
+<select name="device" id="device-select" required style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #ccc;border-radius:8px;">
+  <option value="">اختر نوع الجهاز</option>
+  <option>أفران</option>
+  <option>بوتجازات</option>
+  <option>تكييفات</option>
+  <option>ثلاجات</option>
+  <option>ديب فريزر</option>
+  <option>غسالات أطباق</option>
+  <option>غسالات ملابس</option>
+  <option>مجففات</option>
+  <option>ميكرويفات</option>
+  <option>مبرد مياه</option>
+  <option>شفاطات</option>
+  <option>ثلاجة دوبلكس</option>
+  <option>ماكينة إسبريسو</option>
+</select>
+
+<select name="issue" id="issue-select" required disabled style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #ccc;border-radius:8px;">
+  <option value="">اختر العطل</option>
+</select>
+
+      <input type="text" class="other-issue" name="other_issue" placeholder="يرجى كتابة نوع العطل" style="display:none;width:100%;padding:12px;border:1px solid #ccc;border-radius:8px;margin-top:10px;">
+	<br>
+
+      <label style="display:block;margin:20px 0 10px;font-weight:bold;">هل الجهاز داخل أو خارج الضمان؟</label>
+      <br>
+      <label style="display:block;margin-bottom:8px;"><input type="radio" name="warranty_status" value="داخل الضمان" required> داخل الضمان</label>
+      <label style="display:block;"><input type="radio" name="warranty_status" value="خارج الضمان"> خارج الضمان</label>
+	<br>
+<button type="button" id="nextBtn" class="popup-btn">التالي ←</button>
+    </div>
+
+    <div id="step2" style="display:none;">
+      <div style="text-align:center;margin-bottom:15px;">
+        <span style="font-size:20px;color:#ccc;">○</span>
+        <span style="font-size:20px;color:#E21111;">●</span>
+      </div>
+
+      <select name="governorate" required style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #ccc;border-radius:8px;">
+        <option value="">اختر المحافظة</option>
+        <option>القاهرة</option>
+        <option>الجيزة</option>
+        <option>اخرى</option>
+      </select>
+
+      <input type="text" name="address" placeholder="العنوان بالتفصيل" required style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #ccc;border-radius:8px;">
+      <input type="text" name="area" placeholder="المدينة" required style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #ccc;border-radius:8px;">
+      <textarea name="notes" placeholder="ملاحظات إضافية (اختياري)" style="width:100%;padding:12px;margin-bottom:10px;border:1px solid #ccc;border-radius:8px;"></textarea>
+
+      <div style="display:flex;gap:10px;">
+<button type="button" id="prevBtn" class="popup-btn" style="
+  color: #E21111;
+  background-color: #ffffff;
+  flex: 1;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 1.5px #E21111 inset;
+">
+  → الرجوع
+</button>
+        <button id="submitBtn" type="submit" class="popup-btn" style="background:#E21111;color:#fff;flex:4;">إرسال الطلب</button>
+      </div>
+    </div>
+
+    <div id="successMessage" style="display:none;text-align:center;margin-top:30px;">
+<img src="https://cdn-icons-png.flaticon.com/512/845/845646.png" width="90" alt="تم" style="display:block;margin:0 auto 20px;">
+      <h3 style="color:#008000;">تم إرسال طلبك بنجاح</h3>
+      <p style="color:#444;">فريقنا هيتواصل معاك في أقرب وقت لتأكيد التفاصيل وتحديد معاد الزيارة </p>
+    </div>
+  </form>
+</div>
+
+<style>
+.popup-btn {
+  display: block;
+  width: 100%;
+  padding: 14px 24px;
+  background: #E21111;
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-align: center;
+}
+.popup-btn:hover {
+  background: #E21111;
+  color: #ffffff;
+}
+ #successMessage {
+  display: none;
+  text-align: center;
+  margin-top: 30px;
+  direction: rtl;
+}
+select {
+  appearance: none;       /* إزالة السهم الافتراضي */
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2210%22%20height%3D%227%22%20viewBox%3D%220%200%2010%207%22%20fill%3D%22none%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M1%201L5%205L9%201%22%20stroke%3D%22%236B7281%22%20stroke-width%3D%222%22/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: left 12px center; /* ← عدّل السهم هنا */
+  padding-left: 40px; /* ← مساحة للسهم */
+}
+
+
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".repairForm-ar").forEach(function (form) {
+    const deviceSelect = form.querySelector('#device-select');
+    const issueSelect = form.querySelector('#issue-select');
+    const otherIssueInput = form.querySelector('.other-issue');
+    const submitBtn = form.querySelector('#submitBtn');
+    const step1 = form.querySelector("#step1");
+    const step2 = form.querySelector("#step2");
+    const successMessage = form.querySelector("#successMessage");
+
+    // ✅ الأعطال حسب الجهاز
+    const issuesByDevice = {
+      "أفران": ["الفرن لا يسخن", "مشكلة في المروحة", "السطح لا يعمل", "رائحة دخان أو احتراق", "غير ذلك"],
+      "بوتجازات": ["الشعلة لا تعمل", "ضعف في اللهب", "تسريب غاز", "مشكلة في مفاتيح التشغيل", "غير ذلك"],
+      "تكييفات": ["ضعف التبريد", "الجهاز لا يعمل", "تسريب مياه", "صوت عالي", "غير ذلك"],
+      "ثلاجات": ["لا تبرد", "تصدر صوتًا غير طبيعي", "تسريب مياه", "باب لا يغلق جيدًا", "غير ذلك"],
+      "ديب فريزر": ["لا يجمد", "تجميد زائد", "صوت مرتفع", "باب لا يغلق بإحكام", "غير ذلك"],
+      "غسالات أطباق": ["لا تنظف جيدًا", "تسريب مياه", "توقف في منتصف الدورة", "مشكلة في التشغيل", "غير ذلك"],
+      "غسالات ملابس": ["لا تعصر", "لا تطرد المياه", "اهتزاز شديد", "مشكلة في شاشة التحكم", "غير ذلك"],
+      "مجففات": ["لا تجفف", "تسخين زائد", "رائحة احتراق", "لا تعمل إطلاقًا", "غير ذلك"],
+      "ميكرويفات": ["لا يسخن", "شرارة داخلية", "مشكلة في الباب", "صوت غريب", "غير ذلك"],
+      "مبرد مياه": ["المياه غير باردة", "تسريب", "المروحة لا تعمل", "غير ذلك"],
+      "شفاطات": ["ضعف الشفط", "صوت مزعج", "الإضاءة لا تعمل", "غير ذلك"],
+      "ثلاجة دوبلكس": ["جزء لا يبرد", "الثلج يتراكم", "تسريب", "غير ذلك"],
+      "ماكينة إسبريسو": ["لا تعمل عند التشغيل", "لا يخرج البخار", "تسريب مياه", "القهوة تخرج باردة", "صوت غير طبيعي", "غير ذلك"]
+    };
+
+    // عند تغيير الجهاز → حدث الأعطال
+    deviceSelect.addEventListener("change", function () {
+      const selected = this.value;
+      issueSelect.innerHTML = '<option value="">اختر العطل</option>';
+      if (issuesByDevice[selected]) {
+        issuesByDevice[selected].forEach(issue => {
+          const option = document.createElement("option");
+          option.value = issue;
+          option.textContent = issue;
+          issueSelect.appendChild(option);
+        });
+        issueSelect.disabled = false;
+      } else {
+        issueSelect.disabled = true;
+      }
+
+      otherIssueInput.style.display = "none";
+      otherIssueInput.required = false;
+    });
+
+    issueSelect.addEventListener("change", function () {
+      if (this.value === "غير ذلك") {
+        otherIssueInput.style.display = "block";
+        otherIssueInput.required = true;
+      } else {
+        otherIssueInput.style.display = "none";
+        otherIssueInput.required = false;
+      }
+    });
+
+    form.querySelector("#nextBtn").addEventListener("click", function () {
+      const name = form.querySelector('[name="full-name"]');
+      const phone = form.querySelector('[name="phone"]');
+      const warranty = form.querySelector('[name="warranty_status"]:checked');
+
+      if (!name.value.trim() || !phone.value.trim() || !deviceSelect.value || !issueSelect.value || !warranty) {
+        alert("يرجى ملء كل البيانات المطلوبة");
+        return;
+      }
+
+      if (issueSelect.value === "غير ذلك") {
+        if (!otherIssueInput.value.trim()) {
+          alert("يرجى كتابة نوع العطل");
+          otherIssueInput.focus();
+          return;
+        }
+      }
+
+      step1.style.display = "none";
+      step2.style.display = "block";
+    });
+
+    form.querySelector("#prevBtn").addEventListener("click", function () {
+      step2.style.display = "none";
+      step1.style.display = "block";
+    });
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const area = form.querySelector('[name="area"]');
+      const address = form.querySelector('[name="address"]');
+
+      if (!area.value.trim() || !address.value.trim()) {
+        alert("يرجى إدخال المنطقة والعنوان");
+        return;
+      }
+
+      if (issueSelect.value === "غير ذلك" && otherIssueInput.value.trim()) {
+        const hiddenInput = document.createElement("input");
+        hiddenInput.type = "hidden";
+        hiddenInput.name = "issue";
+        hiddenInput.value = otherIssueInput.value.trim();
+        form.appendChild(hiddenInput);
+        issueSelect.disabled = true;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = "جاري الإرسال...";
+
+      const formData = new URLSearchParams(new FormData(form));
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwG324GsZlJIs6c1ylaMT2PcPUfe16tePcgoTZ4GrcBEtcd14dK6K8-WW8F3RGqC9L3cw/exec';
+
+      fetch(scriptURL, {
+        method: 'POST',
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: formData.toString()
+      })
+        .then(() => {
+          form.reset();
+          step2.style.display = "none";
+          successMessage.style.display = "block";
+          issueSelect.disabled = true;
+          otherIssueInput.style.display = "none";
+          otherIssueInput.required = false;
+          submitBtn.disabled = false;
+          submitBtn.textContent = "إرسال الطلب";
+        })
+        .catch(() => {
+          alert("⚠️ حدث خطأ أثناء الإرسال");
+          submitBtn.disabled = false;
+          submitBtn.textContent = "إرسال الطلب";
+        });
+    });
+  });
+});
+</script>

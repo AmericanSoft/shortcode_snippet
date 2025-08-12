@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>صيانة كاريير</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Cairo', sans-serif;
+      background: #fff;
+    }
+
+    .carrier-box {
+      display: flex;
+      max-width: 1100px;
+      margin: 40px auto;
+      
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .carrier-text {
+      width: 50%;
+      padding: 30px 20px 30px 20px;
+      background: #fff;
+      box-sizing: border-box;
+      text-align: right;
+    }
+
+    .carrier-text h2 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      color: #111;
+    }
+
+    .carrier-text p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #444;
+    }
+
+    .carrier-text .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 20px;
+      background: #002c6b;
+      color: #fff;
+      font-size: 15px;
+      border: none;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .carrier-text .btn:hover {
+      background: #0046a3;
+    }
+
+    .carrier-image {
+      width: 50%;
+      position: relative;
+      background: url('https://carrier-eg.com/wp-content/uploads/2024/12/airtech.jpg') center/cover no-repeat;
+    }
+
+    .carrier-image .inner-photo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 320px;
+      border: 8px solid white;
+      z-index: 10;
+    }
+
+    .carrier-image .inner-photo img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media (max-width: 992px) {
+      .carrier-box {
+        flex-direction: column;
+      }
+      .carrier-text, .carrier-image {
+        width: 100%;
+      }
+      .carrier-image {
+        height: 300px;
+      }
+      .carrier-image .inner-photo {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="carrier-box">
+    <div class="carrier-text">
+      <h2>صيانة كاريير على أعلى مستوى</h2>
+      <p>
+        يعمل توكيل مراكز الخط الساخن على التطور المستمر في صناعة التكييفات
+        وتتميز بعدة نقاط منها: كفاءة التكييف في تقليل استهلاك الطاقة، و قدرته العالية على تبريد الهواء بالإضافة إلى عمره الافتراضي الطويل، مع توفير الموديلات المختلفة والتي تمنحك الاختيار المناسب لمكان العمل أو المنزل.
+      </p>
+      <a href="#" class="btn">اطلب صيانة الآن</a>
+    </div>
+    <div class="carrier-image">
+      <div class="inner-photo">
+        <img src="full-img.png" alt="فني تكييف">
+      </div>
+    </div>
+  </div>
+
+    <div class="carrier-box">
+          <div class="carrier-image">
+      <div class="inner-photo">
+        <img src="full-img.png" alt="فني تكييف">
+      </div>
+    </div>
+    <div class="carrier-text">
+      <h2>صيانة كاريير على أعلى مستوى</h2>
+      <p>
+        يعمل توكيل مراكز الخط الساخن على التطور المستمر في صناعة التكييفات
+        وتتميز بعدة نقاط منها: كفاءة التكييف في تقليل استهلاك الطاقة، و قدرته العالية على تبريد الهواء بالإضافة إلى عمره الافتراضي الطويل، مع توفير الموديلات المختلفة والتي تمنحك الاختيار المناسب لمكان العمل أو المنزل.
+      </p>
+      <a href="#" class="btn">اطلب صيانة الآن</a>
+    </div>
+  
+  </div>
+</body>
+</html>

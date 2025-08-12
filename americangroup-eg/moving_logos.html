@@ -1,0 +1,123 @@
+<style>
+  .logo-marquee{
+    --gap: 64px;
+    --height: 70px;
+    overflow:hidden; width:100%; padding:16px 0; background:#fff;
+    mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  }
+  .logo-track{ display:flex; align-items:center; will-change:transform;
+    backface-visibility: hidden;
+    transform: translate3d(0,0,0); }
+  .logo-set{ display:inline-flex; align-items:center; gap:var(--gap); margin-left: 40px;}
+  .logo{ display:inline-flex; align-items:center; }
+  .logo img{ height:var(--height); width:auto; object-fit:contain; display:block; }
+
+  @media (max-width:768px){ .logo-marquee{ --gap:40px; --height:54px } }
+  @media (max-width:420px){ .logo-marquee{ --gap:28px; --height:44px } }
+</style>
+
+<!-- Logos Marquee -->
+<section class="logo-marquee" id="logos" dir="ltr">
+  <div class="logo-track">
+    <div class="logo-set" id="logoSet">
+      <!-- your logos (one set only) -->
+      <a class="logo"><img src="https://americangroup-eg.com/wp-content/uploads/2025/08/samsung.png" alt="Samsung"></a>
+      <a class="logo"><img src="https://americangroup-eg.com/wp-content/uploads/2025/08/Chiller-Egypt.png" alt="Chiller Egypt"></a>
+      <a class="logo"><img src="https://americangroup-eg.com/wp-content/uploads/2025/08/toshiba.png" alt="Toshiba"></a>
+      <a class="logo"><img src="https://americangroup-eg.com/wp-content/uploads/2025/08/LG.png" alt="LG Egypt"></a>
+      <a class="logo"><img src="https://americangroup-eg.com/wp-content/uploads/2025/08/miele.png" alt="Miele"></a>
+      <a class="logo"><img src="https://americangroup-eg.com/wp-content/uploads/2025/08/Westinghouse.png" alt="Westinghouse"></a>
+
+      <a class="logo"><img src="https://americangroup-eg.com/wp-content/uploads/2025/08/samsung.png" alt="Samsung"></a>
+      <a class="logo"><img src="https://americangroup-eg.com/wp-content/uploads/2025/08/Chiller-Egypt.png" alt="Chiller Egypt"></a>
+      <a class="logo"><img src="https://americangroup-eg.com/wp-content/uploads/2025/08/toshiba.png" alt="Toshiba"></a>
+      <a class="logo"><img src="https://americangroup-eg.com/wp-content/uploads/2025/08/LG.png" alt="LG Egypt"></a>
+      <a class="logo"><img src="https://americangroup-eg.com/wp-content/uploads/2025/08/miele.png" alt="Miele"></a>
+      <a class="logo"><img src="https://americangroup-eg.com/wp-content/uploads/2025/08/Westinghouse.png" alt="Westinghouse"></a>
+
+    </div>
+    <!-- clones inserted by JS -->
+  </div>
+</section>
+
+<script>
+(function(){
+  const root    = document.getElementById('logos');
+  const track   = root.querySelector('.logo-track');
+  const setA    = root.querySelector('#logoSet');
+
+  // 1) clone sets until track is at least 3× viewport (for smooth wrap)
+  function fillClones(){
+    // clear old clones
+    track.querySelectorAll('.logo-set.clone').forEach(n => n.remove());
+    let vw = root.clientWidth;
+    let width = setA.getBoundingClientRect().width;
+    // if images not measured yet, try again after they load
+    if (width === 0) return;
+
+    // ⬅️ زيادة البفر لمنع أي فراغات بعد اللف
+    let neededWidth = vw * 4 + width; // was: vw * 3 + width
+    for (let acc = width; acc < neededWidth; acc += width){
+      const clone = setA.cloneNode(true);
+      clone.classList.add('clone');
+      clone.setAttribute('aria-hidden','true');
+      track.appendChild(clone);
+    }
+  }
+
+  // 2) continuous ticker (no keyframes)
+  let pos = 0;
+  let speed = 150; // pixels per second (adjust to taste)
+  let last = null, setWidth = 0, rafId;
+
+  function measure(){
+    setWidth = Math.ceil(setA.getBoundingClientRect().width);
+  }
+
+  function tick(ts){
+    if (!last) last = ts;
+    const dt = (ts - last) / 1000; // seconds
+    last = ts;
+
+    // move left in LTR, right in RTL
+    const dir = root.getAttribute('dir') === 'rtl' ? 1 : -1;
+    pos += dir * speed * dt;
+
+    // ⬅️ لفّ سلس بدون قفزة (إصلاح حالة RTL)
+    if (dir === -1){
+      while (pos <= -setWidth) pos += setWidth;
+    } else {
+      while (pos >=  setWidth) pos -= setWidth; // was: while (pos >= 0) pos -= setWidth;
+    }
+
+    track.style.transform = `translate3d(${pos}px,0,0)`;
+    rafId = requestAnimationFrame(tick);
+  }
+
+  // 3) wait for images to have dimensions, then start
+  function ready(){
+    measure();
+    if (setWidth === 0) return; // try later if still zero
+    fillClones();
+    cancelAnimationFrame(rafId);
+    last = null; pos = 0;
+    rafId = requestAnimationFrame(tick);
+  }
+
+  const imgs = root.querySelectorAll('img');
+
+  // ⬅️ تحميل/فك ترميز عاجل لمنع ظهور الصور متأخرًا بعد لفّتين
+  imgs.forEach(img => {
+    img.loading = 'eager';
+    img.decoding = 'async';
+  });
+
+  Promise.all([...imgs].map(img => img.complete ? 1 : new Promise(r=>img.addEventListener('load', r, {once:true})))).then(ready);
+
+  // 4) handle resize/orientation/font changes
+  let ro = new ResizeObserver(()=>{ ready(); });
+  ro.observe(setA);
+  window.addEventListener('resize', ready);
+  window.addEventListener('orientationchange', ready);
+})();
+</script>

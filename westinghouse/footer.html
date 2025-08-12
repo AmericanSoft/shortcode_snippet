@@ -1,0 +1,133 @@
+ <style>
+ .footer {
+     font-family: 'Cairo';
+            background-color: #ff6600;
+            color: #fff;
+            padding: 40px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            direction: rtl;
+        }
+
+        .footer-column {
+            flex: 1 1 200px;
+            margin: 10px;
+        }
+
+        .footer h3 {
+            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: 700;
+            color: black;
+        }
+
+        .footer ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer a {
+            font-family: 'Cairo';
+            font-size: 18px;
+            font-weight: 400;
+            color: black;
+            text-decoration: none;
+        }
+        .social-icons{
+            display: flex;
+        }
+
+        .social-icons img {
+            width: 24px;
+            margin: 0 5px;
+            vertical-align: middle;
+        }
+
+        .subscribe {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .subscribe input[type="email"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+
+        .subscribe button {
+            padding: 10px 20px;
+            background: linear-gradient(to right, #000000, #ff6600);
+            color: white;
+            border: none;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .logo img {
+            width: 60px;
+            margin-left: 10px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: start;
+            margin-top: 30px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+<div class="footer">
+    <div class="footer-column logo">
+        <img src="https://westinghouse-eg.com/wp-content/uploads/2025/01/cropped-cropped-Egypt-11.webp" alt="Westinghouse Logo">
+        <strong>ويستنجهاوس</strong>
+    </div>
+
+    <div class="footer-column">
+        <h3>الصفحات الاساسية</h3>
+        <ul>
+            <li><a href="/">الرئيسية</a></li>
+            <li><a href="#">خدمات الصيانة</a></li>
+            <li><a href="#">المنتجات</a></li>
+            <li><a href="/المدونة/">المدونة</a></li>
+            <li><a href="/من نحن/">من نحن ؟</a></li>
+            <li><a href="/تواصل معنا/">تواصل معنا</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-column">
+        <h3>السياسات</h3>
+        <ul>
+            <li><a href="#">الإسترجاع</a></li>
+            <li><a href="#">الصيانة</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-column">
+        <h3>تواصل معنا</h3>
+        <div class="social-icons">
+            <img src="https://img.icons8.com/color/48/gmail-new.png" alt="Gmail">
+            <img src="https://img.icons8.com/color/48/whatsapp--v1.png" alt="WhatsApp">
+            <img src="https://img.icons8.com/color/48/facebook.png" alt="Facebook">
+        </div>
+    </div>
+
+    <div class="footer-column">
+        <h3>اشترك ليصلك كل جديد من كارير</h3>
+        <div class="subscribe">
+            <input type="email" placeholder="البريد الالكتروني">
+            <button>اشتراك</button>
+        </div>
+    </div>
+</div>
+
+</body>
