@@ -1,0 +1,146 @@
+<style>
+  .testimonials-slider {
+    padding: 50px 20px;
+    font-family: "Cairo", sans-serif;
+  }
+  .testimonials-slider h2 {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    color: #111827;
+    margin-bottom: 10px;
+  }
+  .testimonials-slider p.subtitle {
+    text-align: center;
+    color: #6b7280;
+    margin-bottom: 30px;
+  }
+  .swiper-slide {
+    background: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    text-align: center;
+    height: auto;
+  }
+  .stars {
+    color: #fbbf24;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .quote {
+    color: #374151;
+    font-size: 16px;
+    margin-bottom: 25px;
+    line-height: 1.8;
+  }
+  .client {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+  .client img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .client-info {
+    text-align: right;
+  }
+  .client-info h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #111827;
+  }
+  .client-info span {
+    font-size: 14px;
+    color: #6b7280;
+  }
+  .swiper-pagination-bullet {
+    background: #1f4c8f;
+    opacity: 0.4;
+    transition: 0.3s;
+  }
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    width: 20px;
+    border-radius: 10px;
+  }
+  .swiper-pagination {
+  position: relative !important; /* يخليها داخل التدفق الطبيعي */
+  margin-top: 20px; /* المسافة بين السلايدر والباجينيشن */
+  bottom: 0 !important; /* يلغي أي قيمة سابقة */
+}
+
+</style>
+
+<div class="testimonials-slider">
+  <h2>آراء عملائنا</h2>
+  <p class="subtitle">تجارب حقيقية لعملائنا مع خدمات صيانة تكييفات كاريير</p>
+
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="stars">★★★★★</div>
+        <p class="quote">“تكييف <b>Carrier</b> كان التبريد فيه ضعيف. بعد الصيانة وتنظيف الفلاتر رجع يبرد بكفاءة.”</p>
+        <div class="client">
+          <img src="https://cdn-icons-png.flaticon.com/128/149/149071.png">
+          <div class="client-info"><h4>خالد سمير</h4><span>صاحب متجر</span></div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="stars">★★★★★</div>
+        <p class="quote">“خدمة صيانة <b>Carrier</b> كانت سريعة واحترافية، الفني وصل في نفس اليوم وحل المشكلة فوراً.”</p>
+        <div class="client">
+          <img src="https://cdn-icons-png.flaticon.com/128/2922/2922579.png">
+          <div class="client-info"><h4>سارة حسن</h4><span>معلمة</span></div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="stars">★★★★★</div>
+        <p class="quote">“تجربة ممتازة مع فريق <b>Carrier</b>، استبدلوا قطعة تالفة وضبطوا ضغط الفريون، الجهاز بقى ممتاز.”</p>
+        <div class="client">
+          <img src="https://cdn-icons-png.flaticon.com/128/149/149071.png">
+          <div class="client-info"><h4>محمود علي</h4><span>محاسب</span></div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="stars">★★★★★</div>
+        <p class="quote">“كان فيه صوت غريب في تكييف <b>Carrier</b>، بعد الفحص اتضح أن المشكلة في المروحة وتم حلها بالكامل.”</p>
+        <div class="client">
+          <img src="https://cdn-icons-png.flaticon.com/128/2922/2922579.png">
+          <div class="client-info"><h4>داليا يوسف</h4><span>مصممة</span></div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="stars">★★★★★</div>
+        <p class="quote">“شكراً لفريق صيانة <b>Carrier</b> على الخدمة الممتازة، التكييف أصبح يعمل مثل الجديد.”</p>
+        <div class="client">
+          <img src="https://cdn-icons-png.flaticon.com/128/149/149071.png">
+          <div class="client-info"><h4>عمر خليل</h4><span>رائد أعمال</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  new Swiper('.swiper', {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      1024: { slidesPerView: 3 },
+      640: { slidesPerView: 2 },
+      0: { slidesPerView: 1 }
+    }
+  });
+</script>

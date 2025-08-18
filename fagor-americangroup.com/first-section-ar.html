@@ -1,0 +1,185 @@
+<section class="about-rtl" dir="rtl">
+  <div class="about-wrap">
+    <div class="about-head">
+      <span class="head-accent" aria-hidden="true"></span>
+      <h2>من نحن ؟</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <div class="text-with-bar">
+<p>
+  تأسست <b>شركة أمريكان جروب</b> لتكون واحدة من أبرز الشركات المتخصصة في مجال
+  التوكيلات التجارية وتوزيع الأجهزة المنزلية في السوق المصري. على مدار سنوات من
+  العمل الجاد والابتكار، نجحنا في بناء سمعة قوية قائمة على الثقة، الجودة، وخدمة
+  العملاء المميزة.
+</p>
+<p>
+يوجد لدينا فريق عمل محترف يدعمك ويخدمك بكافة السبل الممكنة ويحرص على راحتك دائما , حيث يقوم بشرح جميع المنتجات ومميزاتها لكم , كما يوجد فريق دعم فنى يقوم بصيانة جميع الاجهزة الخاصة بالشركة.
+</p>
+
+        </div>
+        <a href="#" class="about-btn open-popup-btn">احجز صيانة الآن</a>
+      </div>
+
+      <figure class="about-media">
+        <img src="https://fagor.americangroup-eg.com/wp-content/uploads/2025/02/Untitled-design-2.jpg" alt="فني صيانة" />
+      </figure>
+    </div>
+  </div>
+</section>
+
+<style>
+  :root {
+    --primary: #E32614;
+    --primary-700: #aa1f12;
+    --text: #101010;
+    --muted: #4b4b4b;
+    --radius: 18px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: "Cairo", system-ui, Segoe UI, Arial, sans-serif;
+  }
+
+  .about-rtl {
+    background: radial-gradient(900px 900px at 0% 10%, rgba(11, 99, 255, 0.05) 1px, transparent 2px) repeat,
+      radial-gradient(900px 900px at 120% 40%, rgba(11, 99, 255, 0.05) 1px, transparent 2px) repeat;
+    background-size: 120px 120px, 140px 140px;
+    padding: 60px 16px 80px;
+  }
+
+  .about-wrap {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .about-head {
+    text-align: center;
+    margin-bottom: 34px;
+  }
+
+.about-head h2 {
+  margin: 0;
+  font-weight: 800;
+  font-size: clamp(28px, 3vw, 44px);
+  color: var(--text);
+  display: inline-block;
+  position: relative;
+}
+
+.about-head h2::before {
+  content: "";
+  position: absolute;
+  right: 0; /* يبدأ مع أول الكلمة */
+  top: -10px;
+  width: 64px; /* طول الخط */
+  height: 6px;
+  border-radius: 6px;
+  background: var(--primary);
+}
+
+  .about-grid {
+    display: grid;
+    align-items: center;
+    gap: 48px;
+    grid-template-columns: 1.05fr 1fr;
+  }
+
+  .about-media {
+    margin: 0;
+  }
+
+  .about-media img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+    object-fit: cover;
+    max-height: 520px;
+  }
+
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .text-with-bar {
+    position: relative;
+    padding-right: 22px;
+  }
+
+  .text-with-bar::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 6px;
+    height: 100px;
+    bottom: 6px;
+    width: 6px;
+    border-radius: 6px;
+    background: var(--primary);
+  }
+
+  .about-text p {
+    margin: 0 0 10px;
+    color: var(--muted);
+    line-height: 2;
+    font-size: 18px;
+  }
+
+  .about-btn {
+    align-self: flex-start;
+    background: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 22px;
+    border-radius: 12px;
+    font-weight: 800;
+    box-shadow: 0 10px 22px rgba(255, 19, 11, 0.938);
+    transition: transform 0.12s ease, background 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .about-btn:hover {
+    background: var(--primary-700);
+    color: #fff;
+    transform: translateY(-1px);
+  }
+
+  .about-btn:active {
+    transform: translateY(0);
+  }
+
+  @media (max-width: 992px) {
+ .about-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  /* قلب الترتيب عشان الصورة تبقى فوق */
+  .about-media {
+    order: -1;
+  }
+
+  .about-text {
+    align-items: center;
+    text-align: center;
+  }
+  .text-with-bar {
+    padding-right: 0;
+  }
+  .text-with-bar::before {
+    display: none;
+  }
+  .about-btn {
+    align-self: center;
+  }
+}
+</style>
